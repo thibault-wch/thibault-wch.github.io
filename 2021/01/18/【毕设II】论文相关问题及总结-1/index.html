@@ -1,0 +1,422 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>【毕设II】论文相关问题及总结-1 | MR.THIBAULT'S AIRSHIP</title><meta name="author" content="Thibault"><meta name="copyright" content="Thibault"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="一、Random forest prediction of Alzheimer’s disease using pairwise selection from time series data1 研究目的AD是渐变不可逆的，所以尽早地在AD发展的早期阶段进行潜在的药物治疗是很有必要的，所以测试治疗手段是否有助于诊断的预测是很有必要的。 而且另一方面PET扫描阳性是比较昂贵的，可以提供建议避免筛查失">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【毕设II】论文相关问题及总结-1">
+<meta property="og:url" content="https://thibault-wch.github.io/2021/01/18/%E3%80%90%E6%AF%95%E8%AE%BEII%E3%80%91%E8%AE%BA%E6%96%87%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98%E5%8F%8A%E6%80%BB%E7%BB%93-1/index.html">
+<meta property="og:site_name" content="MR.THIBAULT&#39;S AIRSHIP">
+<meta property="og:description" content="一、Random forest prediction of Alzheimer’s disease using pairwise selection from time series data1 研究目的AD是渐变不可逆的，所以尽早地在AD发展的早期阶段进行潜在的药物治疗是很有必要的，所以测试治疗手段是否有助于诊断的预测是很有必要的。 而且另一方面PET扫描阳性是比较昂贵的，可以提供建议避免筛查失">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg">
+<meta property="article:published_time" content="2021-01-18T13:51:02.576Z">
+<meta property="article:modified_time" content="2021-01-18T13:52:17.442Z">
+<meta property="article:author" content="Thibault">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg"><link rel="shortcut icon" href="/img/astro.png"><link rel="canonical" href="https://thibault-wch.github.io/2021/01/18/%E3%80%90%E6%AF%95%E8%AE%BEII%E3%80%91%E8%AE%BA%E6%96%87%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98%E5%8F%8A%E6%80%BB%E7%BB%93-1/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}
+
+// https://stackoverflow.com/questions/16839698/jquery-getscript-alternative-in-native-javascript
+const getScript = url => new Promise((resolve, reject) => {
+  const script = document.createElement('script')
+  script.src = url
+  script.async = true
+  script.onerror = reject
+  script.onload = script.onreadystatechange = function() {
+    const loadState = this.readyState
+    if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+    script.onload = script.onreadystatechange = null
+    resolve()
+  }
+  document.head.appendChild(script)
+})</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-01-18 21:52:17'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><div class="aplayer" data-id="5471894176" data-server="netease" data-type="playlist" data-fixed="true" data-listFolded="false" data-order="random" data-preload="none"></div><link rel="stylesheet" href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css"><script src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/meting@1.2.0/dist/Meting.min.js"></script><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><link rel="stylesheet" href="APlayer.min.css"><div id="aplayer"></div><script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js" async></script><meta name="generator" content="Hexo 5.1.1"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/myicon.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">MR.THIBAULT'S AIRSHIP</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">【毕设II】论文相关问题及总结-1</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-01-18T13:51:02.576Z" title="发表于 2021-01-18 21:51:02">2021-01-18</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-01-18T13:52:17.442Z" title="更新于 2021-01-18 21:52:17">2021-01-18</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="一、Random-forest-prediction-of-Alzheimer’s-disease-using-pairwise-selection-from-time-series-data"><a href="#一、Random-forest-prediction-of-Alzheimer’s-disease-using-pairwise-selection-from-time-series-data" class="headerlink" title="一、Random forest prediction of Alzheimer’s disease using pairwise selection from time series data"></a>一、Random forest prediction of Alzheimer’s disease using pairwise selection from time series data</h2><h3 id="1-研究目的"><a href="#1-研究目的" class="headerlink" title="1 研究目的"></a>1 研究目的</h3><p>AD是渐变不可逆的，所以尽早地在AD发展的早期阶段进行潜在的药物治疗是很有必要的，所以测试治疗手段是否有助于诊断的预测是很有必要的。</p>
+<p>而且另一方面PET扫描阳性是比较昂贵的，可以提供建议避免筛查失败。</p>
+<h3 id="2-AD预测的先例"><a href="#2-AD预测的先例" class="headerlink" title="2 AD预测的先例"></a>2 AD预测的先例</h3><ul>
+<li>32 sMRI和amyloid PET的综合研究，MCI转变AD；</li>
+<li><strong>amyloid PET</strong>是更好的预测AD转变的指标比<strong>MRI</strong>（effect size :1.32 vs 0.77)，但是MRI中<strong>内嗅皮层</strong>的萎缩（effect size: 1.26)也是很好的biomarker；</li>
+<li>amyloidosis 和 neurodegeneration biomarkers;</li>
+<li>个体最好的biomarker是<strong>FDG-PET</strong>去度量<strong>颞顶代谢的减退</strong>。</li>
+</ul>
+<h3 id="3-数据来源"><a href="#3-数据来源" class="headerlink" title="3 数据来源"></a>3 数据来源</h3><h4 id="3-1使用数据集分类"><a href="#3-1使用数据集分类" class="headerlink" title="3.1使用数据集分类"></a>3.1使用数据集分类</h4><table>
+<thead>
+<tr>
+<th>type</th>
+<th>number of participants</th>
+<th>labeled</th>
+<th>origin and others</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>LB1</td>
+<td>1627</td>
+<td>training</td>
+<td></td>
+</tr>
+<tr>
+<td>LB2</td>
+<td>110 participant; 417 time points</td>
+<td>history</td>
+<td>ADNI-1中的第一部分（注意：在ADNI-1的最后时间点内没有被确诊）</td>
+</tr>
+<tr>
+<td>LB4</td>
+<td>110</td>
+<td>test</td>
+<td>ADNI GO/2</td>
+</tr>
+<tr>
+<td>evaluate test</td>
+<td>92</td>
+<td>evaluate</td>
+<td>LB1中查找与LB2数据类似的数据</td>
+</tr>
+</tbody></table>
+<img src="C:\Users\mi\AppData\Roaming\Typora\typora-user-images\image-20201214111716101.png" alt="image-20201214111716101" style="zoom:90%;" />
+
+<h4 id="3-2-data-set-feature-selection"><a href="#3-2-data-set-feature-selection" class="headerlink" title="3.2 data set feature selection"></a>3.2 data set feature selection</h4><ul>
+<li>demographic, cognitive measurements and physical data variables</li>
+<li>the physical data comprises, among other measurements</li>
+<li>MRI data(volumes, cortical thickness, surface area)</li>
+<li>PET(FDG,AV45,AV1451)</li>
+<li>DTI(reginal means of standard indices)</li>
+<li>levels of markers from cerebral spinal fluid(CSF)</li>
+</ul>
+<h3 id="4-方法对比"><a href="#4-方法对比" class="headerlink" title="4 方法对比"></a>4 方法对比</h3><p><img src="C:\Users\mi\AppData\Roaming\Typora\typora-user-images\image-20201214114307344.png" alt="image-20201214114307344"></p>
+<p><img src="C:\Users\mi\AppData\Roaming\Typora\typora-user-images\image-20201214114526874.png" alt="image-20201214114526874"></p>
+<p>官方提供了关于 <strong>lnear mixed effects model **和 **benchmark SVM</strong> 的方法可以做对比实验。</p>
+<ul>
+<li><p><strong>linear mixed effects model</strong></p>
+<p><strong>intercept</strong> (random effect) + <strong>slope</strong>(APOE)</p>
+</li>
+<li><p><strong>SVM</strong></p>
+<ul>
+<li><strong>feature</strong>: ADAS13, Ventricles</li>
+<li><strong>follow-up labeled:</strong> linear support vector machine </li>
+<li><strong>ADAS13/ventricle:</strong> linear support vector regression</li>
+</ul>
+</li>
+<li><p><strong>random forest</strong></p>
+<blockquote>
+<p>很好地应用了可量化和可分类的特征，易于训练和提供了对于每个变量的importance</p>
+</blockquote>
+<p>决策树的集成，每一个树划分输入空间最小化loss function,遍历迭代所有的树后，从而选择变量和划分节点得到最好的划分（即两个子集形成最小的整体差异）。</p>
+<ul>
+<li><p>为减少方差，随机选择n个特征的sqrt(n)的值为对应的分割点；最后回归的总体估计是决策子的平均，把他分类到占比重大的那个类。</p>
+</li>
+<li><p>决策树的参数是树的个数以及一个叶子节点上最小的数据个数；这些值可以通过最小化OOB预测error得到，OOB预测的实现是通过过程的调整而非结果进行实现的。</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>【备注】：<strong>OOB预测误差</strong>（<strong>Out of bag error</strong>）计算：</p>
+<p><img src="C:\Users\mi\AppData\Roaming\Typora\typora-user-images\image-20201214122017005.png" alt="image-20201214122017005"></p>
+<p><strong>Bootstrap</strong>每次约有<strong>1/3的样本</strong>不会出现在Bootstrap所采集的样本集合中,当然也就没有参加决策树的建立,那是不是意味着就没有用了呢,答案是否定的。我们把这<strong>1/3的数据称为袋外数据oob（out of bag）</strong>,它可以用于取代测试集误差估计方法.</p>
+<p>  袋外数据(oob)误差的计算方法如下：</p>
+<p>​     对于已经生成的随机森林,用袋外数据测试其性能,假设袋外数据总数为O,用这O个袋外数据作为输入,带进之前已经生成的随机森林分类器,分类器会给出O个数据相应的分类,因为这O条数据的类型是已知的,则用正确的分类与随机森林分类器的结果进行比较,统计随机森林分类器分类错误的数目,设为X,则袋外数据误差大小=<strong>X/O</strong>;这已经经过证明是无偏估计的,所以在随机森林算法中不需要再进行交叉验证或者单独的测试集来获取测试集误差的无偏估计。</p>
+<h3 id="5、实验与结果"><a href="#5、实验与结果" class="headerlink" title="5、实验与结果"></a>5、实验与结果</h3><h4 id="5-1、相关参数设置"><a href="#5-1、相关参数设置" class="headerlink" title="5.1、相关参数设置"></a>5.1、相关参数设置</h4><table>
+<thead>
+<tr>
+<th>parameter</th>
+<th>number</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>minimum time series</td>
+<td>4</td>
+</tr>
+<tr>
+<td>numbers of trees</td>
+<td>60</td>
+</tr>
+<tr>
+<td>minimum numbeer of data point in a leaf</td>
+<td>5</td>
+</tr>
+</tbody></table>
+<h4 id="5-2、对应预测选择参数"><a href="#5-2、对应预测选择参数" class="headerlink" title="5.2、对应预测选择参数"></a>5.2、对应预测选择参数</h4><p><img src="C:\Users\mi\AppData\Roaming\Typora\typora-user-images\image-20201214175150826.png" alt="image-20201214175150826"></p>
+<p>颅内体积和脑室体积的区别和使用？</p>
+<h4 id="5-3、相关结论"><a href="#5-3、相关结论" class="headerlink" title="5.3、相关结论"></a>5.3、相关结论</h4><ul>
+<li>相对影响因子比较大的几个变量是DX、RID、TIME_DELAY</li>
+<li>预测个体最好的因子是最近的诊断结果，时间是最大影响疾病发展的变量</li>
+<li>AGE、RID、MIDTEMP、delta HIPPOCAMPUS是都很重要的因子</li>
+<li>NC的预测准确99%，MCI的预测准确59%，AD的预测准确为29%，总体准确72%</li>
+</ul>
+<p>预测结果比较低的原因是：因为要预测的时间跨度比较大，要1月到7年不等，这样时间节点的跨度大的话就会产生很高的误差。</p>
+<p>（但是对应AD多分类算法中，大概是53%-96%的区间）</p>
+<p><strong>好处在于不用进行缺值插值操作，直接将时间因子作为变量</strong></p>
+<h3 id="6、-参考文献"><a href="#6、-参考文献" class="headerlink" title="6、 参考文献"></a>6、 参考文献</h3><p><strong>【1】、</strong>Weiner MW, Veitch DP, Aisen PS, Beckett LA, Cairns NJ, Green RC, et al. <strong>Recent publications from the Alzheimer’s Disease Neuroimaging Initiative: Reviewing progress toward improved AD clinical trials</strong>. Alzheimer’s &amp; Dementia. 2017. <a target="_blank" rel="noopener" href="https://doi.org/10.1016/j.jalz.2016.10.006">https://doi.org/10.1016/j.jalz.2016.10.006</a></p>
+<ul>
+<li><p><strong>数据来源</strong></p>
+<p>大多数使用<strong>MRI data</strong>, 补充使用 <strong>PET data</strong>, 以及其他的模态（<strong>cognitive, demographic and genetic data</strong>)。</p>
+</li>
+<li><p><strong>方法</strong></p>
+<p>大多数使用<strong>SVM,</strong> 3篇论文使用随机森林，其他使用<strong>基于分数/其他分类方法</strong></p>
+</li>
+<li><p><strong>目的</strong></p>
+<p>尝试分类NC,MCI,AD的预测转变（通常是MCI向AD）</p>
+</li>
+</ul>
+<p><strong>【2】、CADDementia challenge</strong></p>
+<p>基于<strong>sMRI</strong>数据要求<strong>AD、MCI、和NC的分类挑战</strong></p>
+<blockquote>
+<p> Sørensen L, Pai A, Anker C, Balas I, Lillholm M, Igel C, et al. Dementia diagnosis using MRI cortical thickness, shape, texture, and volumetry. In: Proc MICCAI workshop challenge on computer-aided diagnosis of dementia based on structural MRI data; 2014. p. 111–118.</p>
+</blockquote>
+<p>最好的队伍使用的特征是【①】volumetric biomarkers，【②】 cortical thickness measurements,</p>
+<p>​                                           【③】  hippocampal shape,      【④】  texture and other volume measurements</p>
+<p>使用的方法是<strong>linear discriminant analysis</strong>，达到了63%的精度效果</p>
+<p><strong>【3】、The Kaggle Neuroimaging challenge</strong> <a target="_blank" rel="noopener" href="https://www.kaggle.com/c/mci-prediction">https://www.kaggle.com/c/mci-prediction</a></p>
+<p>用AD、MCI、MCI转变AD和CN预处理过后的T1 MRI作为输入，最好的使用了随机森林方式的集成，完成了61.9%的精度</p>
+<p><strong>【4】、随机森林相关后续要看的文章</strong></p>
+<ul>
+<li><p>Hastie T, Tibshirani R, Friedman J, Hastie T, Friedman J, Tibshirani R. The elements of statistical learning. vol. 2. Springer; 2009. </p>
+</li>
+<li><p>Breiman L. Random forests. Machine learning. 2001; 45(1):5–32. <a target="_blank" rel="noopener" href="https://doi.org/10.1023/">https://doi.org/10.1023/</a> A:1010933404324</p>
+</li>
+</ul>
+<h2 id="二、Disease-progression-timeline-estimation-for-Alzheimer’s-disease-using-discriminative-event-based-modeling"><a href="#二、Disease-progression-timeline-estimation-for-Alzheimer’s-disease-using-discriminative-event-based-modeling" class="headerlink" title="二、Disease progression timeline estimation for Alzheimer’s disease using discriminative event based modeling"></a>二、Disease progression timeline estimation for Alzheimer’s disease using discriminative event based modeling</h2><h3 id="1、研究目的"><a href="#1、研究目的" class="headerlink" title="1、研究目的"></a>1、研究目的</h3><p>有助于理解疾病过程的动态变化、方便早期的诊断和病人分期的诊断。</p>
+<p>对于AD疾病发展的变化预测，一方面可以去有助于进行预防性和支持性的治疗，方便改善生活质量和降低与护理和生活方式改变的成本；另一方面也可以去度量相应治疗的有效性。</p>
+<h3 id="2、AD预测的先例"><a href="#2、AD预测的先例" class="headerlink" title="2、AD预测的先例"></a>2、AD预测的先例</h3><ul>
+<li><strong>纵向数据研究</strong>有的是基于biomarker变化、有的是基于自身模型变化、有的是基于用户定制的混合模型变化研究，但是他们都比较依赖于相对比较大疾病数量的数据集，所以实现效果不是很好；</li>
+<li>为了规避受试者数量不够的问题，然后有人通过<strong>横截面数据的方式进行预测疾病的进程</strong>；有的采用症状的分型去预测特定的亚型，但这种方式粒度是比较粗和定性的；</li>
+<li>EBM模型是基于biomarker变成异常的事件进行推断的，一个重要的假设是<strong>事件的顺序</strong>在一个数据集中变化是一致的，但是有点严格对于AD的研究，而且AD的biomarker的数量也比较大。</li>
+</ul>
+<h3 id="3、DEBM相应方法"><a href="#3、DEBM相应方法" class="headerlink" title="3、DEBM相应方法"></a>3、DEBM相应方法</h3><h4 id="3-1-EBM（Event-based-model"><a href="#3-1-EBM（Event-based-model" class="headerlink" title="3.1 EBM（Event-based model)"></a>3.1 EBM（Event-based model)</h4><p>biomarker的值随疾病的严重程度单调增加/减少（有一定的噪音）。疾病的发展是由一系列的事件组成的，事件对应着一个新的biomarker变为异常的过程。Frontejin的EBM模型发现从受试者提取的数据集大部分遵循事件发生的顺序。</p>
+<p><strong>【基本假设】</strong></p>
+<p>控制人群中的所有biomarker是均匀的，且biomarker的值服从高斯分布，<img src="C:\Users\mi\AppData\Roaming\Typora\typora-user-images\image-20201215092918172.png" alt="image-20201215092918172">是可计算的；</p>
+<p>而patient人群中的异常biomarker的值是服从均匀分布的。</p>
+<p>所以将会得到一个高斯分布和一个均匀分布的混合模型，但是只有均匀分布中的参数可以被优化调整。</p>
+<p><strong>【基本算法】</strong></p>
+<ul>
+<li><p><strong>S</strong> i是biomarkers对应的索引，表明他们变异常的相关顺序；</p>
+</li>
+<li><p><img src="C:\Users\mi\AppData\Roaming\Typora\typora-user-images\image-20201215081819030.png" alt="image-20201215081819030">是疾病变化的过程，N为数据集中每个受试者的biomarker数目；<img src="C:\Users\mi\AppData\Roaming\Typora\typora-user-images\image-20201215082043067.png" alt="image-20201215082043067">为对应关联S(i)生物标志物的第i个事件变为异常；</p>
+</li>
+<li><p>M个受试者中的横截面数据集（X），<img src="C:\Users\mi\AppData\Roaming\Typora\typora-user-images\image-20201215082916966.png" alt="image-20201215082916966">表明受试者<img src="C:\Users\mi\AppData\Roaming\Typora\typora-user-images\image-20201215083029799.png" alt="image-20201215083029799">的生物标志物的度量，由N维的生物标记物组成<img src="C:\Users\mi\AppData\Roaming\Typora\typora-user-images\image-20201215083303318.png" alt="image-20201215083303318" style="zoom:60%;" />，对应一个EBM的概率公式可以通过<img src="C:\Users\mi\AppData\Roaming\Typora\typora-user-images\image-20201215083541348.png" alt="image-20201215083541348" style="zoom:67%;" />得出，通过对应贝叶斯公式<img src="C:\Users\mi\AppData\Roaming\Typora\typora-user-images\image-20201215083648023.png" alt="image-20201215083648023">得出，但这里有个假设是**p(S)**是均匀分布的，</p>
+</li>
+<li><p><img src="C:\Users\mi\AppData\Roaming\Typora\typora-user-images\image-20201215084335010.png" alt="image-20201215084335010" style="zoom:80%;" /> <strong>p(k|S）</strong>是一个受试者在事件发展过程中第k位置的先验概率，假设是相等的在每一个位置；最大化<img src="C:\Users\mi\AppData\Roaming\Typora\typora-user-images\image-20201215084642099.png" alt="image-20201215084642099">的第k个位置，表明受试者j的疾病阶段，这种方法通过识别受试者的严重程度去产生了离散的阶段，阶段的数量不一定与biomarkers的数量一致。</p>
+</li>
+<li><p><img src="C:\Users\mi\AppData\Roaming\Typora\typora-user-images\image-20201215091755111.png" alt="image-20201215091755111">,<img src="C:\Users\mi\AppData\Roaming\Typora\typora-user-images\image-20201215091834560.png" alt="image-20201215091834560">是观察<img src="C:\Users\mi\AppData\Roaming\Typora\typora-user-images\image-20201215091932265.png" alt="image-20201215091932265">在受试者j发生i事件的可能性，二是<img src="C:\Users\mi\AppData\Roaming\Typora\typora-user-images\image-20201215092913201.png" alt="image-20201215092913201">事件i不可能发生的可能性。</p>
+</li>
+</ul>
+<h4 id="3-2-DBEM"><a href="#3-2-DBEM" class="headerlink" title="3.2 DBEM"></a>3.2 DBEM</h4><h5 id="3-2-1-biomarker-progression"><a href="#3-2-1-biomarker-progression" class="headerlink" title="3.2.1 biomarker progression"></a>3.2.1 biomarker progression</h5><p><strong>【不平凡性】</strong></p>
+<p>对于每一个biomarker求出对应事件前后发生的概率密度，其结果是不平凡的，原因：</p>
+<ul>
+<li>biomarker的异常程度不能用临床状态（CN/AD）度量；</li>
+<li>临床状态的诊断不是二义的，可能会有其他的类别（MCI）</li>
+</ul>
+<p><strong>【贝叶斯分类器】</strong></p>
+<img src="C:\Users\mi\AppData\Roaming\Typora\typora-user-images\image-20201215114805780.png" alt="image-20201215114805780" style="zoom: 67%;" />
+
+<ul>
+<li><p><strong>【initial estimate】</strong>贝叶斯分类器通过每一个biomarker使用CN和AD状态进行训练，基于CN受试者没有biomarker异常和AD受试者全部受试者异常的假设 ，然后可以将受试者分谓很容易分类的CN、AD、和其他受试者，删去其他受试者，这样就能得到一个截断的高斯分布；</p>
+</li>
+<li><p><strong>【refine  estimate】</strong>高斯混合分布，包括所有可用的数据</p>
+<p><img src="C:\Users\mi\AppData\Roaming\Typora\typora-user-images\image-20201215114542891.png" alt="image-20201215114542891"></p>
+<p>在这里混合参数和高斯参数混合优化，直到混合参数收敛得到想要的结果。</p>
+</li>
+</ul>
+<h5 id="3-2-2-Estimating-a-central-ordering"><a href="#3-2-2-Estimating-a-central-ordering" class="headerlink" title="3.2.2 Estimating a central ordering"></a>3.2.2 Estimating a central ordering</h5><p><strong>【subject-specific orderings】</strong></p>
+<p><img src="C:\Users\mi\AppData\Roaming\Typora\typora-user-images\image-20201215141008768.png" alt="image-20201215141008768"></p>
+<p><strong>【central ordering】</strong></p>
+<p>目标就是最小化距离之和的求解。</p>
+<ul>
+<li><p><strong>Kendall’s Tau distance</strong></p>
+<p><img src="C:\Users\mi\AppData\Roaming\Typora\typora-user-images\image-20201215141714726.png" alt="image-20201215141714726"></p>
+<p><img src="C:\Users\mi\AppData\Roaming\Typora\typora-user-images\image-20201215142434205.png" alt="image-20201215142434205"></p>
+</li>
+<li><p><strong>probabilistic Kendall’s Tau distance</strong> </p>
+<p><img src="C:\Users\mi\AppData\Roaming\Typora\typora-user-images\image-20201215142628146.png" alt="image-20201215142628146"></p>
+<p>相应实现置换算法：</p>
+<p><img src="C:\Users\mi\AppData\Roaming\Typora\typora-user-images\image-20201215144011897.png" alt="image-20201215144011897"></p>
+</li>
+</ul>
+<h5 id="3-2-3-Estimating-event-centers"><a href="#3-2-3-Estimating-event-centers" class="headerlink" title="3.2.3 Estimating event centers"></a>3.2.3 Estimating event centers</h5><p>虽然给出了具体的估计，但是没有给出整个序列变为异常的时间轴，所以提出了相应的distance</p>
+<p><img src="C:\Users\mi\AppData\Roaming\Typora\typora-user-images\image-20201215144548593.png" alt="image-20201215144548593"></p>
+<p><img src="C:\Users\mi\AppData\Roaming\Typora\typora-user-images\image-20201215151056121.png" alt="image-20201215151056121"></p>
+<p>然后计算相应的事件中心，咱这里但也要保证概率距离之和为1</p>
+<p><img src="C:\Users\mi\AppData\Roaming\Typora\typora-user-images\image-20201215151455187.png" alt="image-20201215151455187"></p>
+<p>所以<strong>S</strong>给出了biomarker发展的顺序信息， <strong>事件中心</strong>给出了在这个时间线上对应的事件中心的信息。</p>
+<h3 id="4、相关实验"><a href="#4、相关实验" class="headerlink" title="4、相关实验"></a>4、相关实验</h3><p>52个生物标记物（47个GM的区域生物标志物，3个CSF的区域生物标志物，2个认知分数）用于实验一和实验二。</p>
+<p> <strong>4.1、实验一</strong></p>
+<ul>
+<li><p><strong>A 实验</strong></p>
+<p>7个biomarkers(3 CSF features, MMSE score, ADAS-Cog score, GM volume of the hippocampus, GM volume in whole brain),研究这几个的事件中心和疾病位置变化。</p>
+</li>
+<li><p><strong>B 实验</strong></p>
+<p>top 25 biomarkers去调查结果是否一致。</p>
+<p><strong>4.2、实验2</strong> </p>
+</li>
+</ul>
+<p>进行相应的病人分期用以往的几个EBM模型评估，发现现有的模型会更好一点；</p>
+<blockquote>
+<p>对应得出相关结论为：disease stage为0时，CN和MCI比较多；在disease stage比较低的时候CN和sMCI多，而后期的时候MCI和AD比较多。</p>
+</blockquote>
+<p> <strong>4.3、实验3</strong></p>
+<p>定性分析对应的Abeta蛋白针对于判断的影响，然后发现对应的结果和stage是有所区别的；</p>
+<p>【<strong>模拟数据可以去产生CN\AD\MCI横截面的数据！！！</strong>】</p>
+<p><img src="C:\Users\mi\AppData\Roaming\Typora\typora-user-images\image-20201215172927053.png" alt="image-20201215172927053"></p>
+<p>重要点是评估事件中心的“event-error”和disease stage的“ordering error”</p>
+<p><strong>【顺序误差】</strong></p>
+<p><img src="C:\Users\mi\AppData\Roaming\Typora\typora-user-images\image-20201215173449993.png" alt="image-20201215173449993"></p>
+<p><strong>【事件中心误差】</strong></p>
+<p><img src="C:\Users\mi\AppData\Roaming\Typora\typora-user-images\image-20201215174149615.png" alt="在HEBMvv2中，我们将混合模型和对象特定顺序的估计解耦（实验4、6、7和8）。这使得HEBM更具可扩展性，因为它改进了实验4中1737名受试者的结果，但是当受试者数量较少时，解耦对算法有不利影响，如实验7所示，在实验7中，HEBMvv2即使在受试者数目的情况下也比FEBMvv2表现差"></p>
+<p>通过一些参数设计，形成了1737个subject和对应7个biomarker的数据</p>
+<p><strong>4.4、实验四及实验五</strong></p>
+<p>通过模型对比去应用在合成的数据上时，发现其效果是比较显著的；</p>
+<p><strong>4.5、实验六</strong></p>
+<p>调整对应参数导致非均匀分布相应，</p>
+<p><strong>4.6、实验七</strong> </p>
+<p>研究对应受试者数量多少对整体的影响，数量越多普遍性能越好最后稳定</p>
+<p><strong>4.7、实验八</strong></p>
+<p>研究biomarker对实验的影响，尽可能避免不同指标影响程度有的重和轻的情况；对应数量越多效果越差最后稳定</p>
+<h3 id="5、相关讨论"><a href="#5、相关讨论" class="headerlink" title="5、相关讨论"></a>5、相关讨论</h3><ul>
+<li><strong>event center</strong><ul>
+<li>如果说A事件可以导致B事件，那么可以观察出对应的结果A事件先于B事件发生，但是他的限制就在于发现不了相应的因果关系；</li>
+<li>事件本身其实就相当于时间轴上的里程碑，但是其实和对应的disease stage还是存在一定误差的；</li>
+<li>事件中心缩放到了0-1之间，这样的好处是不同的因子可比。</li>
+</ul>
+</li>
+</ul>
+<p>早期结构生物标志物主要来自颞叶，其次是中央结构、额叶、顶叶和枕叶。</p>
+<p>最后还是用的<strong>linear model</strong>和<strong>SVM</strong>去解决</p>
+<h3 id="6、参考文献"><a href="#6、参考文献" class="headerlink" title="6、参考文献"></a>6、参考文献</h3><p>【1】 **An event-based model for disease progression and its application in familial Alzheimer’s disease and Huntington’s disease,**NeuroImage,Volume 60, Issue 3,2012,Pages 1880-1889,ISSN 1053-8119,<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S1053811912000791">https://www.sciencedirect.com/science/article/pii/S1053811912000791</a></p>
+<p>【2】<strong>Multiple Orderings of Events in Disease Progression</strong>  <strong>（合成数据框架）</strong></p>
+<p><a target="_blank" rel="noopener" href="https://link.springer.com/chapter/10.1007%2F978-3-319-19992-4_56">https://link.springer.com/chapter/10.1007%2F978-3-319-19992-4_56</a></p>
+<p><strong>【相关源代码】</strong></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/88vikram/pyebm/">https://github.com/88vikram/pyebm/</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Thibault</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://thibault-wch.github.io/2021/01/18/%E3%80%90%E6%AF%95%E8%AE%BEII%E3%80%91%E8%AE%BA%E6%96%87%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98%E5%8F%8A%E6%80%BB%E7%BB%93-1/">https://thibault-wch.github.io/2021/01/18/%E3%80%90%E6%AF%95%E8%AE%BEII%E3%80%91%E8%AE%BA%E6%96%87%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98%E5%8F%8A%E6%80%BB%E7%BB%93-1/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://thibault-wch.github.io" target="_blank">MR.THIBAULT'S AIRSHIP</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2021/01/18/%E3%80%90%E6%AF%95%E8%AE%BEI%E3%80%91TADPOLE%E6%95%B0%E6%8D%AE%E9%9B%86%E5%88%86%E6%9E%90/"><img class="next-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">【毕设I】TADPOLE数据集分析</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/myicon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Thibault</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/thibault-wch"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/thibault-wch" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="/girrel@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">Mr.Thibault is talking here.</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81Random-forest-prediction-of-Alzheimer%E2%80%99s-disease-using-pairwise-selection-from-time-series-data"><span class="toc-number">1.</span> <span class="toc-text">一、Random forest prediction of Alzheimer’s disease using pairwise selection from time series data</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%A0%94%E7%A9%B6%E7%9B%AE%E7%9A%84"><span class="toc-number">1.1.</span> <span class="toc-text">1 研究目的</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-AD%E9%A2%84%E6%B5%8B%E7%9A%84%E5%85%88%E4%BE%8B"><span class="toc-number">1.2.</span> <span class="toc-text">2 AD预测的先例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%95%B0%E6%8D%AE%E6%9D%A5%E6%BA%90"><span class="toc-number">1.3.</span> <span class="toc-text">3 数据来源</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1%E4%BD%BF%E7%94%A8%E6%95%B0%E6%8D%AE%E9%9B%86%E5%88%86%E7%B1%BB"><span class="toc-number">1.3.1.</span> <span class="toc-text">3.1使用数据集分类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-data-set-feature-selection"><span class="toc-number">1.3.2.</span> <span class="toc-text">3.2 data set feature selection</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E6%96%B9%E6%B3%95%E5%AF%B9%E6%AF%94"><span class="toc-number">1.4.</span> <span class="toc-text">4 方法对比</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81%E5%AE%9E%E9%AA%8C%E4%B8%8E%E7%BB%93%E6%9E%9C"><span class="toc-number">1.5.</span> <span class="toc-text">5、实验与结果</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#5-1%E3%80%81%E7%9B%B8%E5%85%B3%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE"><span class="toc-number">1.5.1.</span> <span class="toc-text">5.1、相关参数设置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-2%E3%80%81%E5%AF%B9%E5%BA%94%E9%A2%84%E6%B5%8B%E9%80%89%E6%8B%A9%E5%8F%82%E6%95%B0"><span class="toc-number">1.5.2.</span> <span class="toc-text">5.2、对应预测选择参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-3%E3%80%81%E7%9B%B8%E5%85%B3%E7%BB%93%E8%AE%BA"><span class="toc-number">1.5.3.</span> <span class="toc-text">5.3、相关结论</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6%E3%80%81-%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="toc-number">1.6.</span> <span class="toc-text">6、 参考文献</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81Disease-progression-timeline-estimation-for-Alzheimer%E2%80%99s-disease-using-discriminative-event-based-modeling"><span class="toc-number">2.</span> <span class="toc-text">二、Disease progression timeline estimation for Alzheimer’s disease using discriminative event based modeling</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E7%A0%94%E7%A9%B6%E7%9B%AE%E7%9A%84"><span class="toc-number">2.1.</span> <span class="toc-text">1、研究目的</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81AD%E9%A2%84%E6%B5%8B%E7%9A%84%E5%85%88%E4%BE%8B"><span class="toc-number">2.2.</span> <span class="toc-text">2、AD预测的先例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81DEBM%E7%9B%B8%E5%BA%94%E6%96%B9%E6%B3%95"><span class="toc-number">2.3.</span> <span class="toc-text">3、DEBM相应方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-EBM%EF%BC%88Event-based-model"><span class="toc-number">2.3.1.</span> <span class="toc-text">3.1 EBM（Event-based model)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-DBEM"><span class="toc-number">2.3.2.</span> <span class="toc-text">3.2 DBEM</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#3-2-1-biomarker-progression"><span class="toc-number">2.3.2.1.</span> <span class="toc-text">3.2.1 biomarker progression</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-2-2-Estimating-a-central-ordering"><span class="toc-number">2.3.2.2.</span> <span class="toc-text">3.2.2 Estimating a central ordering</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-2-3-Estimating-event-centers"><span class="toc-number">2.3.2.3.</span> <span class="toc-text">3.2.3 Estimating event centers</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E7%9B%B8%E5%85%B3%E5%AE%9E%E9%AA%8C"><span class="toc-number">2.4.</span> <span class="toc-text">4、相关实验</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81%E7%9B%B8%E5%85%B3%E8%AE%A8%E8%AE%BA"><span class="toc-number">2.5.</span> <span class="toc-text">5、相关讨论</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6%E3%80%81%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="toc-number">2.6.</span> <span class="toc-text">6、参考文献</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/01/18/%E3%80%90%E6%AF%95%E8%AE%BEII%E3%80%91%E8%AE%BA%E6%96%87%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98%E5%8F%8A%E6%80%BB%E7%BB%93-1/" title="【毕设II】论文相关问题及总结-1">【毕设II】论文相关问题及总结-1</a><time datetime="2021-01-18T13:51:02.576Z" title="发表于 2021-01-18 21:51:02">2021-01-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/01/18/%E3%80%90%E6%AF%95%E8%AE%BEI%E3%80%91TADPOLE%E6%95%B0%E6%8D%AE%E9%9B%86%E5%88%86%E6%9E%90/" title="【毕设I】TADPOLE数据集分析">【毕设I】TADPOLE数据集分析</a><time datetime="2021-01-18T13:51:02.566Z" title="发表于 2021-01-18 21:51:02">2021-01-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/01/18/%E3%80%90%E6%AF%95%E8%AE%BEIII%E3%80%91%E8%AE%BA%E6%96%87%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98%E5%8F%8A%E6%80%BB%E7%BB%93-2/" title="【毕设III】论文相关问题及总结-2">【毕设III】论文相关问题及总结-2</a><time datetime="2021-01-18T13:51:02.542Z" title="发表于 2021-01-18 21:51:02">2021-01-18</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2021 By Thibault</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to listen me!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script></div></body></html>
