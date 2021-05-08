@@ -1,13 +1,13 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>动手学深度学习（Pytorch）4-线性回归及基本实现 | MR.THIBAULT'S AIRSHIP</title><meta name="keywords" content="动手学深度学习,pytorch,李沫"><meta name="author" content="Thibault"><meta name="copyright" content="Thibault"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="一、向量链式法则1、自动求导 一个函数在指定值上的导数 &lt;- 借助无环图完成 2、相关演练计算 　$ y&#x3D;2*x^2 $　 的自动求导机制 import torch x &#x3D; torch.arange(4.0) x tensor([0., 1., 2., 3.])  tensor([1., 1., 1., 1.]) # 存放梯度 x.requires_grad_(True) # 等价于x &#x3D;">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>动手学深度学习（Pytorch）4-线性回归及基本实现 | MR.THIBAULT'S AIRSHIP</title><meta name="keywords" content="动手学深度学习,pytorch,李沫"><meta name="author" content="Thibault"><meta name="copyright" content="Thibault"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="一、向量链式法则1、自动求导 一个函数在指定值上的导数 &lt;- 借助无环图完成 2、相关演练计算 　$ y&#x3D;2*x^2 $　 的自动求导机制 123import torchx &#x3D; torch.arange(4.0)x     tensor([0., 1., 2., 3.])     tensor([1., 1., 1., 1.]) 123# 存放梯度x.requires_grad_(True)">
 <meta property="og:type" content="article">
 <meta property="og:title" content="动手学深度学习（Pytorch）4-线性回归及基本实现">
 <meta property="og:url" content="https://thibault-wch.github.io/2021/05/07/%E5%8A%A8%E6%89%8B%E5%AD%A6%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0Pytorch_4_%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%8F%8A%E5%9F%BA%E6%9C%AC%E5%AE%9E%E7%8E%B0/index.html">
 <meta property="og:site_name" content="MR.THIBAULT&#39;S AIRSHIP">
-<meta property="og:description" content="一、向量链式法则1、自动求导 一个函数在指定值上的导数 &lt;- 借助无环图完成 2、相关演练计算 　$ y&#x3D;2*x^2 $　 的自动求导机制 import torch x &#x3D; torch.arange(4.0) x tensor([0., 1., 2., 3.])  tensor([1., 1., 1., 1.]) # 存放梯度 x.requires_grad_(True) # 等价于x &#x3D;">
+<meta property="og:description" content="一、向量链式法则1、自动求导 一个函数在指定值上的导数 &lt;- 借助无环图完成 2、相关演练计算 　$ y&#x3D;2*x^2 $　 的自动求导机制 123import torchx &#x3D; torch.arange(4.0)x     tensor([0., 1., 2., 3.])     tensor([1., 1., 1., 1.]) 123# 存放梯度x.requires_grad_(True)">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg">
 <meta property="article:published_time" content="2021-05-07T07:45:53.993Z">
-<meta property="article:modified_time" content="2021-05-07T10:52:35.459Z">
+<meta property="article:modified_time" content="2021-05-08T09:33:14.842Z">
 <meta property="article:author" content="Thibault">
 <meta property="article:tag" content="动手学深度学习">
 <meta property="article:tag" content="pytorch">
@@ -102,7 +102,7 @@ const getScript = url => new Promise((resolve, reject) => {
   isHome: false,
   isHighlightShrink: false,
   isToc: true,
-  postUpdate: '2021-05-07 18:52:35'
+  postUpdate: '2021-05-08 17:33:14'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -167,48 +167,56 @@ if (asideStatus !== undefined) {
    } else {
      document.documentElement.classList.remove('hide-aside')
    }
-}})()</script><link rel="stylesheet" href="APlayer.min.css"><div id="aplayer"></div><script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js" async></script><meta name="generator" content="Hexo 5.1.1"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" data-lazy-src="/img/myicon.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">MR.THIBAULT'S AIRSHIP</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">动手学深度学习（Pytorch）4-线性回归及基本实现</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-05-07T07:45:53.993Z" title="发表于 2021-05-07 15:45:53">2021-05-07</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-05-07T10:52:35.459Z" title="更新于 2021-05-07 18:52:35">2021-05-07</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/">深度学习基础学习</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="一、向量链式法则"><a href="#一、向量链式法则" class="headerlink" title="一、向量链式法则"></a>一、向量链式法则</h2><h3 id="1、自动求导"><a href="#1、自动求导" class="headerlink" title="1、自动求导"></a>1、自动求导</h3><p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/thibault/picpic/raw/master/image-20210507155648546.png" alt="image-20210507155648546"></p>
+}})()</script><link rel="stylesheet" href="APlayer.min.css"><div id="aplayer"></div><script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js" async></script><meta name="generator" content="Hexo 5.1.1"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" data-lazy-src="/img/myicon.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">MR.THIBAULT'S AIRSHIP</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">动手学深度学习（Pytorch）4-线性回归及基本实现</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-05-07T07:45:53.993Z" title="发表于 2021-05-07 15:45:53">2021-05-07</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-05-08T09:33:14.842Z" title="更新于 2021-05-08 17:33:14">2021-05-08</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/">深度学习基础学习</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="一、向量链式法则"><a href="#一、向量链式法则" class="headerlink" title="一、向量链式法则"></a>一、向量链式法则</h2><h3 id="1、自动求导"><a href="#1、自动求导" class="headerlink" title="1、自动求导"></a>1、自动求导</h3><p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/thibault/picpic/raw/master/image-20210507155648546.png" alt="image-20210507155648546"></p>
 <p>一个函数在指定值上的导数 &lt;- 借助无环图完成<br><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/thibault/picpic/raw/master/image-20210507155702952.png" alt="image-20210507155702952"></p>
 <h3 id="2、相关演练"><a href="#2、相关演练" class="headerlink" title="2、相关演练"></a>2、相关演练</h3><p>计算 　$ y=2*x^2 $　 的自动求导机制</p>
-<pre><code class="python">import torch
-x = torch.arange(4.0)
-x</code></pre>
-<pre><code>tensor([0., 1., 2., 3.])</code></pre>
-<pre><code class="python"></code></pre>
-<pre><code>tensor([1., 1., 1., 1.])</code></pre>
-<pre><code class="python"># 存放梯度
-x.requires_grad_(True) # 等价于x = torch.arange(4.0，requires_grad=True)
-x.grad #默认为True</code></pre>
-<pre><code class="python">y=2*torch.dot(x,x)
-y</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line">x = torch.arange(<span class="number">4.0</span>)</span><br><span class="line">x</span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>tensor([0., 1., 2., 3.])
+
+
+
+
+tensor([1., 1., 1., 1.])</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 存放梯度</span></span><br><span class="line">x.requires_grad_(<span class="literal">True</span>) <span class="comment"># 等价于x = torch.arange(4.0，requires_grad=True)</span></span><br><span class="line">x.grad <span class="comment">#默认为True</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">y=<span class="number">2</span>*torch.dot(x,x)</span><br><span class="line">y</span><br></pre></td></tr></table></figure>
+
+
+
+
 <pre><code>tensor(28., grad_fn=&lt;MulBackward0&gt;)</code></pre>
-<pre><code class="python">y.backward()
-x.grad</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">y.backward()</span><br><span class="line">x.grad</span><br></pre></td></tr></table></figure>
+
+
+
+
 <pre><code>tensor([ 0.,  4.,  8., 12.])</code></pre>
-<pre><code class="python">x.grad==4*x</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x.grad==<span class="number">4</span>*x</span><br></pre></td></tr></table></figure>
+
+
+
+
 <pre><code>tensor([True, True, True, True])</code></pre>
 <p>计算x的另一个函数</p>
-<pre><code class="python"># 默认情况下，pytorch会累计梯度，首先要清楚之前值
-x.grad.zero_()
-y=x.sum()
-y.backward()
-x.grad</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 默认情况下，pytorch会累计梯度，首先要清楚之前值</span></span><br><span class="line">x.grad.zero_()</span><br><span class="line">y=x.sum()</span><br><span class="line">y.backward()</span><br><span class="line">x.grad</span><br></pre></td></tr></table></figure>
+
+
+
+
 <pre><code>tensor([1., 1., 1., 1.])</code></pre>
-<pre><code class="python"># 对非标量调用&#39;backward&#39;需要传入一个&#39;gradient&#39;参数,从而指定微分函数
-x.grad.zero_()
-y=x*x
-# 等价于y.backward(torch.ones(len(x)))  将矢量变成标量
-y.sum().backward()
-x.grad</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 对非标量调用&#x27;backward&#x27;需要传入一个&#x27;gradient&#x27;参数,从而指定微分函数</span></span><br><span class="line">x.grad.zero_()</span><br><span class="line">y=x*x</span><br><span class="line"><span class="comment"># 等价于y.backward(torch.ones(len(x)))  将矢量变成标量</span></span><br><span class="line">y.sum().backward()</span><br><span class="line">x.grad</span><br></pre></td></tr></table></figure>
+
+
+
+
 <pre><code>tensor([0., 2., 4., 6.])</code></pre>
-<pre><code class="python">x.grad.zero_()
-y=x*x
-# 将变量移到计算图以外,则使其确定为一个常熟
-u=y.detach()
-z=u*x
-z.sum().backward()
-print(x.grad)
-x.grad==u</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">x.grad.zero_()</span><br><span class="line">y=x*x</span><br><span class="line"><span class="comment"># 将变量移到计算图以外,则使其确定为一个常熟</span></span><br><span class="line">u=y.detach()</span><br><span class="line">z=u*x</span><br><span class="line">z.sum().backward()</span><br><span class="line">print(x.grad)</span><br><span class="line">x.grad==u</span><br></pre></td></tr></table></figure>
+
 <pre><code>tensor([0., 1., 4., 9.])
 
 
@@ -216,25 +224,20 @@ x.grad==u</code></pre>
 
 
 tensor([True, True, True, True])</code></pre>
-<pre><code class="python">x.grad.zero_()
-y.sum().backward()
-x.grad==2*x</code></pre>
-<pre><code>tensor([True, True, True, True])</code></pre>
-<pre><code class="python"># python控制流对计算变量进行求导
-def f(a):
-    b=a*2
-    while b.norm()&lt;1000:
-        b=b*2
-    if b.sum()&gt;0:
-        c=b
-    else:
-        c=100*b
-    return c
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x.grad.zero_()</span><br><span class="line">y.sum().backward()</span><br><span class="line">x.grad==<span class="number">2</span>*x</span><br></pre></td></tr></table></figure>
 
-a=torch.randn(size=(),requires_grad=True)
-d=f(a)
-d.backward()</code></pre>
-<pre><code class="python">a.grad</code></pre>
+
+
+
+<pre><code>tensor([True, True, True, True])</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># python控制流对计算变量进行求导</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">f</span>(<span class="params">a</span>):</span></span><br><span class="line">    b=a*<span class="number">2</span></span><br><span class="line">    <span class="keyword">while</span> b.norm()&lt;<span class="number">1000</span>:</span><br><span class="line">        b=b*<span class="number">2</span></span><br><span class="line">    <span class="keyword">if</span> b.sum()&gt;<span class="number">0</span>:</span><br><span class="line">        c=b</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        c=<span class="number">100</span>*b</span><br><span class="line">    <span class="keyword">return</span> c</span><br><span class="line"></span><br><span class="line">a=torch.randn(size=(),requires_grad=<span class="literal">True</span>)</span><br><span class="line">d=f(a)</span><br><span class="line">d.backward()</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a.grad</span><br></pre></td></tr></table></figure>
+
+
+
+
 <pre><code>tensor(409600.)</code></pre>
 <h2 id="二、线性回归"><a href="#二、线性回归" class="headerlink" title="二、线性回归"></a>二、线性回归</h2><h3 id="1、线性模型"><a href="#1、线性模型" class="headerlink" title="1、线性模型"></a>1、线性模型</h3><p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/thibault/picpic/raw/master/image-20210507155807068.png" alt="image-20210507155807068"></p>
 <ul>
