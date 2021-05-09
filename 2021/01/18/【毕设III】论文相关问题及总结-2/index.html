@@ -170,21 +170,21 @@ if (asideStatus !== undefined) {
 <li>对于每一个受试者而言，可能有多个visit，但是visit的时间间隔是不规律的；</li>
 <li>每个受试者的visit数目也是不一样的；</li>
 </ul>
-<h2 id="二、Model-尝试"><a href="#二、Model-尝试" class="headerlink" title="二、Model 尝试"></a>二、Model 尝试</h2><p><img src="https://gitee.com/thibault/picpic/raw/master/image-20201218110258976.png" alt="image-20201218110258976"></p>
+<h2 id="二、Model-尝试"><a href="#二、Model-尝试" class="headerlink" title="二、Model 尝试"></a>二、Model 尝试</h2><p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/thibault/picpic/raw/master/image-20201218110258976.png" alt="image-20201218110258976"></p>
 <h2 id="三、数据预处理"><a href="#三、数据预处理" class="headerlink" title="三、数据预处理"></a>三、数据预处理</h2><p>###　3.1、输入数据过滤</p>
 <p>1、对于特征的筛选，如果这一列特征的空白值超过70%，则删去；</p>
 <p>2、如果说某一列的值全是一样的value，那么也要删去；</p>
 <p>通过以上步骤过滤掉了1500个特征，而只留下了大约337个特征（除了PTID_KEY和EXAMDATE）；</p>
 <p>如果尝试用PCA，得到200个特征，但300多个是可以接受的，所以还是选择了这些；</p>
-<p><img src="https://gitee.com/thibault/picpic/raw/master/image-20201218111350724.png" alt="image-20201218111350724"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/thibault/picpic/raw/master/image-20201218111350724.png" alt="image-20201218111350724"></p>
 <h3 id="3-2、输出数据过滤"><a href="#3-2、输出数据过滤" class="headerlink" title="3.2、输出数据过滤"></a>3.2、输出数据过滤</h3><p>按照PTID_KEY排序后进行筛选：</p>
 <p>1、删去用户所有visit中所有列都为NaN的用户；</p>
 <p>2、删去一个病人的所有visit中至少有一列为NaN的样本</p>
 <h2 id="四、对比实验"><a href="#四、对比实验" class="headerlink" title="四、对比实验"></a>四、对比实验</h2><h3 id="4-1、Baseline-Algorithm-LOCF"><a href="#4-1、Baseline-Algorithm-LOCF" class="headerlink" title="4.1、Baseline Algorithm(LOCF)"></a>4.1、Baseline Algorithm(LOCF)</h3><p>LOCF——Last Output Carry Forward</p>
 <p>预测的对应值直接来自于最近的visit，基于自最后一次visit后用户的状态不会发生改变。</p>
-<h3 id="4-2、SVM"><a href="#4-2、SVM" class="headerlink" title="4.2、SVM"></a>4.2、SVM</h3><p><img src="https://gitee.com/thibault/picpic/raw/master/image-20201218152653292.png" alt="image-20201218152653292"></p>
-<h3 id="4-3、LSTM-Modified-LSTM"><a href="#4-3、LSTM-Modified-LSTM" class="headerlink" title="4.3、LSTM+Modified LSTM"></a>4.3、LSTM+Modified LSTM</h3><p><img src="https://gitee.com/thibault/picpic/raw/master/image-20201218165644796.png" alt="image-20201218165644796"></p>
-<h3 id="4-4、Architecture-modified-LSTM"><a href="#4-4、Architecture-modified-LSTM" class="headerlink" title="4.4、Architecture-modified LSTM"></a>4.4、Architecture-modified LSTM</h3><p><img src="https://gitee.com/thibault/picpic/raw/master/image-20201218172841635.png" alt="image-20201218172841635"></p>
+<h3 id="4-2、SVM"><a href="#4-2、SVM" class="headerlink" title="4.2、SVM"></a>4.2、SVM</h3><p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/thibault/picpic/raw/master/image-20201218152653292.png" alt="image-20201218152653292"></p>
+<h3 id="4-3、LSTM-Modified-LSTM"><a href="#4-3、LSTM-Modified-LSTM" class="headerlink" title="4.3、LSTM+Modified LSTM"></a>4.3、LSTM+Modified LSTM</h3><p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/thibault/picpic/raw/master/image-20201218165644796.png" alt="image-20201218165644796"></p>
+<h3 id="4-4、Architecture-modified-LSTM"><a href="#4-4、Architecture-modified-LSTM" class="headerlink" title="4.4、Architecture-modified LSTM"></a>4.4、Architecture-modified LSTM</h3><p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/thibault/picpic/raw/master/image-20201218172841635.png" alt="image-20201218172841635"></p>
 <h2 id="五、相关结论"><a href="#五、相关结论" class="headerlink" title="五、相关结论"></a>五、相关结论</h2><p>整体的LOCF的想法其实是很好的，包括一些精度都可以发现LOCF的实现效果其实很一致；</p>
 <p>其二,T-LSTM还是有待加强和研究的；</p>
 <h1 id="Predicting-Alzheimer’s-disease-progression-using-deep-recurrent-neural-networks"><a href="#Predicting-Alzheimer’s-disease-progression-using-deep-recurrent-neural-networks" class="headerlink" title="Predicting Alzheimer’s disease progression using deep recurrent neural networks"></a>Predicting Alzheimer’s disease progression using deep recurrent neural networks</h1><h2 id="一、相关研究"><a href="#一、相关研究" class="headerlink" title="一、相关研究"></a>一、相关研究</h2><h3 id="1-1-过去AD预测探讨"><a href="#1-1-过去AD预测探讨" class="headerlink" title="1.1 过去AD预测探讨"></a>1.1 过去AD预测探讨</h3><ul>
@@ -201,10 +201,10 @@ if (asideStatus !== undefined) {
 <li><strong>预先插入丢失的数据，后续建模</strong></li>
 <li><strong>直接将丢失的数据插入训练，统一整合</strong></li>
 </ul>
-<h2 id="二、实现方法"><a href="#二、实现方法" class="headerlink" title="二、实现方法"></a>二、实现方法</h2><h3 id="1、选择特征"><a href="#1、选择特征" class="headerlink" title="1、选择特征"></a>1、选择特征</h3><p><img src="https://gitee.com/thibault/picpic/raw/master/image-20201218180849806.png" alt="image-20201218180849806"></p>
-<h3 id="2、模型介绍"><a href="#2、模型介绍" class="headerlink" title="2、模型介绍"></a>2、模型介绍</h3><p><img src="https://gitee.com/thibault/picpic/raw/master/image-20201218183417539.png" alt="image-20201218183417539"></p>
+<h2 id="二、实现方法"><a href="#二、实现方法" class="headerlink" title="二、实现方法"></a>二、实现方法</h2><h3 id="1、选择特征"><a href="#1、选择特征" class="headerlink" title="1、选择特征"></a>1、选择特征</h3><p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/thibault/picpic/raw/master/image-20201218180849806.png" alt="image-20201218180849806"></p>
+<h3 id="2、模型介绍"><a href="#2、模型介绍" class="headerlink" title="2、模型介绍"></a>2、模型介绍</h3><p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/thibault/picpic/raw/master/image-20201218183417539.png" alt="image-20201218183417539"></p>
 <h3 id="3、LOSS函数"><a href="#3、LOSS函数" class="headerlink" title="3、LOSS函数"></a>3、LOSS函数</h3><p>LOSS函数只用于对应的有timestamp的时候，如果没有将不用于backforward操作。</p>
-<p><img src="https://gitee.com/thibault/picpic/raw/master/image-20201218183454034.png" alt="image-20201218183454034"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/thibault/picpic/raw/master/image-20201218183454034.png" alt="image-20201218183454034"></p>
 <h3 id="4、相关插值方法"><a href="#4、相关插值方法" class="headerlink" title="4、相关插值方法"></a>4、相关插值方法</h3><ul>
 <li><p>**”preprocessing strategies(2)”**——插值和训练分开独立，先插值再训练</p>
 <ul>

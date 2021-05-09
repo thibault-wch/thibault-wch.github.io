@@ -207,7 +207,7 @@ if (asideStatus !== undefined) {
 <td>LB1中查找与LB2数据类似的数据</td>
 </tr>
 </tbody></table>
-<img src="https://gitee.com/thibault/picpic/raw/master/image-20201214111716101.png" alt="image-20201214111716101" style="zoom:90%;" />
+<img src= "/img/loading.gif" data-lazy-src="https://gitee.com/thibault/picpic/raw/master/image-20201214111716101.png" alt="image-20201214111716101" style="zoom:90%;" />
 
 <h4 id="3-2-data-set-feature-selection"><a href="#3-2-data-set-feature-selection" class="headerlink" title="3.2 data set feature selection"></a>3.2 data set feature selection</h4><ul>
 <li>demographic, cognitive measurements and physical data variables</li>
@@ -217,8 +217,8 @@ if (asideStatus !== undefined) {
 <li>DTI(reginal means of standard indices)</li>
 <li>levels of markers from cerebral spinal fluid(CSF)</li>
 </ul>
-<h3 id="4-方法对比"><a href="#4-方法对比" class="headerlink" title="4 方法对比"></a>4 方法对比</h3><p><img src="https://gitee.com/thibault/picpic/raw/master/image-20201214114307344.png" alt="image-20201214114307344"></p>
-<p><img src="https://gitee.com/thibault/picpic/raw/master/image-20201214114526874.png" alt="image-20201214114526874"></p>
+<h3 id="4-方法对比"><a href="#4-方法对比" class="headerlink" title="4 方法对比"></a>4 方法对比</h3><p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/thibault/picpic/raw/master/image-20201214114307344.png" alt="image-20201214114307344"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/thibault/picpic/raw/master/image-20201214114526874.png" alt="image-20201214114526874"></p>
 <p>官方提供了关于 <strong>lnear mixed effects model **和 **benchmark SVM</strong> 的方法可以做对比实验。</p>
 <ul>
 <li><p><strong>linear mixed effects model</strong></p>
@@ -245,7 +245,7 @@ if (asideStatus !== undefined) {
 </li>
 </ul>
 <p>【备注】：<strong>OOB预测误差</strong>（<strong>Out of bag error</strong>）计算：</p>
-<p><img src="https://gitee.com/thibault/picpic/raw/master/image-20201214122017005.png" alt="image-20201214122017005"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/thibault/picpic/raw/master/image-20201214122017005.png" alt="image-20201214122017005"></p>
 <p><strong>Bootstrap</strong>每次约有<strong>1/3的样本</strong>不会出现在Bootstrap所采集的样本集合中,当然也就没有参加决策树的建立,那是不是意味着就没有用了呢,答案是否定的。我们把这<strong>1/3的数据称为袋外数据oob（out of bag）</strong>,它可以用于取代测试集误差估计方法.</p>
 <p>  袋外数据(oob)误差的计算方法如下：</p>
 <p>​     对于已经生成的随机森林,用袋外数据测试其性能,假设袋外数据总数为O,用这O个袋外数据作为输入,带进之前已经生成的随机森林分类器,分类器会给出O个数据相应的分类,因为这O条数据的类型是已知的,则用正确的分类与随机森林分类器的结果进行比较,统计随机森林分类器分类错误的数目,设为X,则袋外数据误差大小=<strong>X/O</strong>;这已经经过证明是无偏估计的,所以在随机森林算法中不需要再进行交叉验证或者单独的测试集来获取测试集误差的无偏估计。</p>
@@ -269,7 +269,7 @@ if (asideStatus !== undefined) {
 <td>5</td>
 </tr>
 </tbody></table>
-<h4 id="5-2、对应预测选择参数"><a href="#5-2、对应预测选择参数" class="headerlink" title="5.2、对应预测选择参数"></a>5.2、对应预测选择参数</h4><p><img src="https://gitee.com/thibault/picpic/raw/master/image-20201214175150826.png" alt="image-20201214175150826"></p>
+<h4 id="5-2、对应预测选择参数"><a href="#5-2、对应预测选择参数" class="headerlink" title="5.2、对应预测选择参数"></a>5.2、对应预测选择参数</h4><p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/thibault/picpic/raw/master/image-20201214175150826.png" alt="image-20201214175150826"></p>
 <p>颅内体积和脑室体积的区别和使用？</p>
 <h4 id="5-3、相关结论"><a href="#5-3、相关结论" class="headerlink" title="5.3、相关结论"></a>5.3、相关结论</h4><ul>
 <li>相对影响因子比较大的几个变量是DX、RID、TIME_DELAY</li>
@@ -318,20 +318,20 @@ if (asideStatus !== undefined) {
 </ul>
 <h3 id="3、DEBM相应方法"><a href="#3、DEBM相应方法" class="headerlink" title="3、DEBM相应方法"></a>3、DEBM相应方法</h3><h4 id="3-1-EBM（Event-based-model"><a href="#3-1-EBM（Event-based-model" class="headerlink" title="3.1 EBM（Event-based model)"></a>3.1 EBM（Event-based model)</h4><p>biomarker的值随疾病的严重程度单调增加/减少（有一定的噪音）。疾病的发展是由一系列的事件组成的，事件对应着一个新的biomarker变为异常的过程。Frontejin的EBM模型发现从受试者提取的数据集大部分遵循事件发生的顺序。</p>
 <p><strong>【基本假设】</strong></p>
-<p>控制人群中的所有biomarker是均匀的，且biomarker的值服从高斯分布，<img src="https://gitee.com/thibault/picpic/raw/master/image-20201215092918172.png" alt="image-20201215092918172">是可计算的；</p>
+<p>控制人群中的所有biomarker是均匀的，且biomarker的值服从高斯分布，<img src= "/img/loading.gif" data-lazy-src="https://gitee.com/thibault/picpic/raw/master/image-20201215092918172.png" alt="image-20201215092918172">是可计算的；</p>
 <p>而patient人群中的异常biomarker的值是服从均匀分布的。</p>
 <p>所以将会得到一个高斯分布和一个均匀分布的混合模型，但是只有均匀分布中的参数可以被优化调整。</p>
 <p><strong>【基本算法】</strong></p>
 <ul>
 <li><p><strong>S</strong> i是biomarkers对应的索引，表明他们变异常的相关顺序；</p>
 </li>
-<li><p><img src="https://gitee.com/thibault/picpic/raw/master/image-20201215081819030.png" alt="image-20201215081819030">是疾病变化的过程，N为数据集中每个受试者的biomarker数目；<img src="https://gitee.com/thibault/picpic/raw/master/image-20201215082043067.png" alt="image-20201215082043067">为对应关联S(i)生物标志物的第i个事件变为异常；</p>
+<li><p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/thibault/picpic/raw/master/image-20201215081819030.png" alt="image-20201215081819030">是疾病变化的过程，N为数据集中每个受试者的biomarker数目；<img src= "/img/loading.gif" data-lazy-src="https://gitee.com/thibault/picpic/raw/master/image-20201215082043067.png" alt="image-20201215082043067">为对应关联S(i)生物标志物的第i个事件变为异常；</p>
 </li>
-<li><p>M个受试者中的横截面数据集（X），<img src="https://gitee.com/thibault/picpic/raw/master/image-20201215082916966.png" alt="image-20201215082916966">表明受试者<img src="https://gitee.com/thibault/picpic/raw/master/image-20201215083029799.png" alt="image-20201215083029799">的生物标志物的度量，由N维的生物标记物组成<img src="https://gitee.com/thibault/picpic/raw/master/image-20201215083303318.png" alt="image-20201215083303318" style="zoom:60%;" />，对应一个EBM的概率公式可以通过<img src="https://gitee.com/thibault/picpic/raw/master/image-20201215083541348.png" alt="image-20201215083541348" style="zoom:67%;" />得出，通过对应贝叶斯公式<img src="https://gitee.com/thibault/picpic/raw/master/image-20201215083648023.png" alt="image-20201215083648023">得出，但这里有个假设是**p(S)**是均匀分布的，</p>
+<li><p>M个受试者中的横截面数据集（X），<img src= "/img/loading.gif" data-lazy-src="https://gitee.com/thibault/picpic/raw/master/image-20201215082916966.png" alt="image-20201215082916966">表明受试者<img src= "/img/loading.gif" data-lazy-src="https://gitee.com/thibault/picpic/raw/master/image-20201215083029799.png" alt="image-20201215083029799">的生物标志物的度量，由N维的生物标记物组成<img src= "/img/loading.gif" data-lazy-src="https://gitee.com/thibault/picpic/raw/master/image-20201215083303318.png" alt="image-20201215083303318" style="zoom:60%;" />，对应一个EBM的概率公式可以通过<img src= "/img/loading.gif" data-lazy-src="https://gitee.com/thibault/picpic/raw/master/image-20201215083541348.png" alt="image-20201215083541348" style="zoom:67%;" />得出，通过对应贝叶斯公式<img src= "/img/loading.gif" data-lazy-src="https://gitee.com/thibault/picpic/raw/master/image-20201215083648023.png" alt="image-20201215083648023">得出，但这里有个假设是**p(S)**是均匀分布的，</p>
 </li>
-<li><p><img src="https://gitee.com/thibault/picpic/raw/master/image-20201215084335010.png" alt="image-20201215084335010" style="zoom:80%;" /> <strong>p(k|S）</strong>是一个受试者在事件发展过程中第k位置的先验概率，假设是相等的在每一个位置；最大化<img src="https://gitee.com/thibault/picpic/raw/master/image-20201215084642099.png" alt="image-20201215084642099">的第k个位置，表明受试者j的疾病阶段，这种方法通过识别受试者的严重程度去产生了离散的阶段，阶段的数量不一定与biomarkers的数量一致。</p>
+<li><p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/thibault/picpic/raw/master/image-20201215084335010.png" alt="image-20201215084335010" style="zoom:80%;" /> <strong>p(k|S）</strong>是一个受试者在事件发展过程中第k位置的先验概率，假设是相等的在每一个位置；最大化<img src= "/img/loading.gif" data-lazy-src="https://gitee.com/thibault/picpic/raw/master/image-20201215084642099.png" alt="image-20201215084642099">的第k个位置，表明受试者j的疾病阶段，这种方法通过识别受试者的严重程度去产生了离散的阶段，阶段的数量不一定与biomarkers的数量一致。</p>
 </li>
-<li><p><img src="https://gitee.com/thibault/picpic/raw/master/image-20201215091755111.png" alt="image-20201215091755111">,<img src="https://gitee.com/thibault/picpic/raw/master/image-20201215091834560.png" alt="image-20201215091834560">是观察<img src="https://gitee.com/thibault/picpic/raw/master/image-20201215091932265.png" alt="image-20201215091932265">在受试者j发生i事件的可能性，二是<img src="https://gitee.com/thibault/picpic/raw/master/image-20201215092913201.png" alt="image-20201215092913201">事件i不可能发生的可能性。</p>
+<li><p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/thibault/picpic/raw/master/image-20201215091755111.png" alt="image-20201215091755111">,<img src= "/img/loading.gif" data-lazy-src="https://gitee.com/thibault/picpic/raw/master/image-20201215091834560.png" alt="image-20201215091834560">是观察<img src= "/img/loading.gif" data-lazy-src="https://gitee.com/thibault/picpic/raw/master/image-20201215091932265.png" alt="image-20201215091932265">在受试者j发生i事件的可能性，二是<img src= "/img/loading.gif" data-lazy-src="https://gitee.com/thibault/picpic/raw/master/image-20201215092913201.png" alt="image-20201215092913201">事件i不可能发生的可能性。</p>
 </li>
 </ul>
 <h4 id="3-2-DBEM"><a href="#3-2-DBEM" class="headerlink" title="3.2 DBEM"></a>3.2 DBEM</h4><h5 id="3-2-1-biomarker-progression"><a href="#3-2-1-biomarker-progression" class="headerlink" title="3.2.1 biomarker progression"></a>3.2.1 biomarker progression</h5><p><strong>【不平凡性】</strong></p>
@@ -341,36 +341,36 @@ if (asideStatus !== undefined) {
 <li>临床状态的诊断不是二义的，可能会有其他的类别（MCI）</li>
 </ul>
 <p><strong>【贝叶斯分类器】</strong></p>
-<img src="https://gitee.com/thibault/picpic/raw/master/image-20201215114805780.png" alt="image-20201215114805780" style="zoom: 67%;" />
+<img src= "/img/loading.gif" data-lazy-src="https://gitee.com/thibault/picpic/raw/master/image-20201215114805780.png" alt="image-20201215114805780" style="zoom: 67%;" />
 
 <ul>
 <li><p><strong>【initial estimate】</strong>贝叶斯分类器通过每一个biomarker使用CN和AD状态进行训练，基于CN受试者没有biomarker异常和AD受试者全部受试者异常的假设 ，然后可以将受试者分谓很容易分类的CN、AD、和其他受试者，删去其他受试者，这样就能得到一个截断的高斯分布；</p>
 </li>
 <li><p><strong>【refine  estimate】</strong>高斯混合分布，包括所有可用的数据</p>
-<p><img src="https://gitee.com/thibault/picpic/raw/master/image-20201215114542891.png" alt="image-20201215114542891"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/thibault/picpic/raw/master/image-20201215114542891.png" alt="image-20201215114542891"></p>
 <p>在这里混合参数和高斯参数混合优化，直到混合参数收敛得到想要的结果。</p>
 </li>
 </ul>
 <h5 id="3-2-2-Estimating-a-central-ordering"><a href="#3-2-2-Estimating-a-central-ordering" class="headerlink" title="3.2.2 Estimating a central ordering"></a>3.2.2 Estimating a central ordering</h5><p><strong>【subject-specific orderings】</strong></p>
-<p><img src="https://gitee.com/thibault/picpic/raw/master/image-20201215141008768.png" alt="image-20201215141008768"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/thibault/picpic/raw/master/image-20201215141008768.png" alt="image-20201215141008768"></p>
 <p><strong>【central ordering】</strong></p>
 <p>目标就是最小化距离之和的求解。</p>
 <ul>
 <li><p><strong>Kendall’s Tau distance</strong></p>
-<p><img src="https://gitee.com/thibault/picpic/raw/master/image-20201215141714726.png" alt="image-20201215141714726"></p>
-<p><img src="https://gitee.com/thibault/picpic/raw/master/image-20201215142434205.png" alt="image-20201215142434205"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/thibault/picpic/raw/master/image-20201215141714726.png" alt="image-20201215141714726"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/thibault/picpic/raw/master/image-20201215142434205.png" alt="image-20201215142434205"></p>
 </li>
 <li><p><strong>probabilistic Kendall’s Tau distance</strong> </p>
-<p><img src="https://gitee.com/thibault/picpic/raw/master/image-20201215142628146.png" alt="image-20201215142628146"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/thibault/picpic/raw/master/image-20201215142628146.png" alt="image-20201215142628146"></p>
 <p>相应实现置换算法：</p>
-<p><img src="https://gitee.com/thibault/picpic/raw/master/image-20201215144011897.png" alt="image-20201215144011897"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/thibault/picpic/raw/master/image-20201215144011897.png" alt="image-20201215144011897"></p>
 </li>
 </ul>
 <h5 id="3-2-3-Estimating-event-centers"><a href="#3-2-3-Estimating-event-centers" class="headerlink" title="3.2.3 Estimating event centers"></a>3.2.3 Estimating event centers</h5><p>虽然给出了具体的估计，但是没有给出整个序列变为异常的时间轴，所以提出了相应的distance</p>
-<p><img src="https://gitee.com/thibault/picpic/raw/master/image-20201215144548593.png" alt="image-20201215144548593"></p>
-<p><img src="https://gitee.com/thibault/picpic/raw/master/image-20201215151056121.png" alt="image-20201215151056121"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/thibault/picpic/raw/master/image-20201215144548593.png" alt="image-20201215144548593"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/thibault/picpic/raw/master/image-20201215151056121.png" alt="image-20201215151056121"></p>
 <p>然后计算相应的事件中心，咱这里但也要保证概率距离之和为1</p>
-<p><img src="https://gitee.com/thibault/picpic/raw/master/image-20201215151455187.png" alt="image-20201215151455187"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/thibault/picpic/raw/master/image-20201215151455187.png" alt="image-20201215151455187"></p>
 <p>所以<strong>S</strong>给出了biomarker发展的顺序信息， <strong>事件中心</strong>给出了在这个时间线上对应的事件中心的信息。</p>
 <h3 id="4、相关实验"><a href="#4、相关实验" class="headerlink" title="4、相关实验"></a>4、相关实验</h3><p>52个生物标记物（47个GM的区域生物标志物，3个CSF的区域生物标志物，2个认知分数）用于实验一和实验二。</p>
 <p> <strong>4.1、实验一</strong></p>
@@ -390,12 +390,12 @@ if (asideStatus !== undefined) {
 <p> <strong>4.3、实验3</strong></p>
 <p>定性分析对应的Abeta蛋白针对于判断的影响，然后发现对应的结果和stage是有所区别的；</p>
 <p>【<strong>模拟数据可以去产生CN\AD\MCI横截面的数据！！！</strong>】</p>
-<p><img src="https://gitee.com/thibault/picpic/raw/master/image-20201215172927053.png" alt="image-20201215172927053"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/thibault/picpic/raw/master/image-20201215172927053.png" alt="image-20201215172927053"></p>
 <p>重要点是评估事件中心的“event-error”和disease stage的“ordering error”</p>
 <p><strong>【顺序误差】</strong></p>
-<p><img src="https://gitee.com/thibault/picpic/raw/master/image-20201215173449993.png" alt="image-20201215173449993"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/thibault/picpic/raw/master/image-20201215173449993.png" alt="image-20201215173449993"></p>
 <p><strong>【事件中心误差】</strong></p>
-<p><img src="https://gitee.com/thibault/picpic/raw/master/image-20201215174149615.png" alt="在HEBMvv2中，我们将混合模型和对象特定顺序的估计解耦（实验4、6、7和8）。这使得HEBM更具可扩展性，因为它改进了实验4中1737名受试者的结果，但是当受试者数量较少时，解耦对算法有不利影响，如实验7所示，在实验7中，HEBMvv2即使在受试者数目的情况下也比FEBMvv2表现差"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/thibault/picpic/raw/master/image-20201215174149615.png" alt="在HEBMvv2中，我们将混合模型和对象特定顺序的估计解耦（实验4、6、7和8）。这使得HEBM更具可扩展性，因为它改进了实验4中1737名受试者的结果，但是当受试者数量较少时，解耦对算法有不利影响，如实验7所示，在实验7中，HEBMvv2即使在受试者数目的情况下也比FEBMvv2表现差"></p>
 <p>通过一些参数设计，形成了1737个subject和对应7个biomarker的数据</p>
 <p><strong>4.4、实验四及实验五</strong></p>
 <p>通过模型对比去应用在合成的数据上时，发现其效果是比较显著的；</p>
