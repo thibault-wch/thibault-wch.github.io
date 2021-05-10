@@ -1,0 +1,356 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>LINUX1-基本知识 | MR.THIBAULT'S AIRSHIP</title><meta name="keywords" content="LINUX"><meta name="author" content="Thibault"><meta name="copyright" content="Thibault"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="1、预先知识ll表示显示当前目录文件 2、文件表示在 Linux 世界里，一切皆文件。  reboot 重启 useradd 添加用户-&gt;添加用户到home目录下其中目录结构中：  usr     上传目录  mnt    挂载的文件  opt     放要安装的为念  &#x2F;usr&#x2F;local     放安装后的文件3、vi&#x2F;vim查看  A、正常模式在正常模式下，我们可以使用快捷键。以 vi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LINUX1-基本知识">
+<meta property="og:url" content="https://thibault-wch.github.io/2021/05/10/LINUX_1_%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86/index.html">
+<meta property="og:site_name" content="MR.THIBAULT&#39;S AIRSHIP">
+<meta property="og:description" content="1、预先知识ll表示显示当前目录文件 2、文件表示在 Linux 世界里，一切皆文件。  reboot 重启 useradd 添加用户-&gt;添加用户到home目录下其中目录结构中：  usr     上传目录  mnt    挂载的文件  opt     放要安装的为念  &#x2F;usr&#x2F;local     放安装后的文件3、vi&#x2F;vim查看  A、正常模式在正常模式下，我们可以使用快捷键。以 vi">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg">
+<meta property="article:published_time" content="2021-05-10T09:03:20.256Z">
+<meta property="article:modified_time" content="2021-05-10T09:05:45.743Z">
+<meta property="article:author" content="Thibault">
+<meta property="article:tag" content="LINUX">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg"><link rel="shortcut icon" href="/img/astro.png"><link rel="canonical" href="https://thibault-wch.github.io/2021/05/10/LINUX_1_%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: {"limitDay":356,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":null,"languages":{"author":"作者: Thibault","link":"链接: ","source":"来源: MR.THIBAULT'S AIRSHIP","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}
+
+// https://stackoverflow.com/questions/16839698/jquery-getscript-alternative-in-native-javascript
+const getScript = url => new Promise((resolve, reject) => {
+  const script = document.createElement('script')
+  script.src = url
+  script.async = true
+  script.onerror = reject
+  script.onload = script.onreadystatechange = function() {
+    const loadState = this.readyState
+    if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+    script.onload = script.onreadystatechange = null
+    resolve()
+  }
+  document.head.appendChild(script)
+})</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-05-10 17:05:45'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><link rel="stylesheet" href="APlayer.min.css"><div id="aplayer"></div><script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js" async></script><meta name="generator" content="Hexo 5.1.1"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" data-lazy-src="/img/myicon.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">14</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">MR.THIBAULT'S AIRSHIP</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">LINUX1-基本知识</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-05-10T09:03:20.256Z" title="发表于 2021-05-10 17:03:20">2021-05-10</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-05-10T09:05:45.743Z" title="更新于 2021-05-10 17:05:45">2021-05-10</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/LINUX/">LINUX</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h3 id="1、预先知识"><a href="#1、预先知识" class="headerlink" title="1、预先知识"></a>1、预先知识</h3><p><code>ll</code><strong>表示显示当前目录文件</strong></p>
+<h3 id="2、文件表示"><a href="#2、文件表示" class="headerlink" title="2、文件表示"></a><strong>2、文件表示</strong></h3><p><strong>在 Linux 世界里，一切皆文件。</strong><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/thibault/picpic/raw/master/20191012104914960.png" alt="在这里插入图片描述"></p>
+<ul>
+<li><code>reboot</code> 重启</li>
+<li><code>useradd</code> 添加用户-&gt;添加用户到home目录下<br>其中目录结构中：<br>  usr     上传目录<br>  mnt    挂载的文件<br>  opt     放要安装的为念<br>  /usr/local     放安装后的文件<br><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/thibault/picpic/raw/master/20191012103823789.png" alt="在这里插入图片描述"><h3 id="3、vi-vim查看"><a href="#3、vi-vim查看" class="headerlink" title="3、vi/vim查看"></a><strong>3、vi/vim查看</strong></h3><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/thibault/picpic/raw/master/20191012104012962.png" alt="Alt"></li>
+</ul>
+<h4 id="A、正常模式"><a href="#A、正常模式" class="headerlink" title="A、正常模式"></a><strong>A、正常模式</strong></h4><p>在正常模式下，我们可以使用快捷键。<br>以 <strong>vim</strong> 打开一个档案就直接进入一般模式了(这是默认的模式)。在这个模式中， 你可以使用<strong>『上下左右』按键</strong>来移动光标，你可以使用<strong>『删除字符』</strong>或<strong>『删除整行』</strong>来处理档案内容， 也可以使用<strong>『复制、贴上』</strong>来处理你的文件数据。</p>
+<ul>
+<li>①、所有的 Linux 系统都会内建 <code>vi</code> 文本编辑器。</li>
+<li>②、拷贝当前行 <code>yy</code> ,  拷贝当前行向下的 5 行 <code>5yy</code>，并粘贴（<code>p</code>）。</li>
+<li>③、删除当前行<code>dd</code>, 删除当前行向下的 5 行 <code>5dd</code></li>
+<li>④、在文件中查找某个单词  [命令行下  <code>/关键字</code>  ， 回车  查找  ,    输入 <code>n</code> 就是查找下一个 ]</li>
+<li>⑤、设置文件的行号，取消文件的行号.[命令行下 <code>: set nu</code>  和    <code>:set nonu</code>]</li>
+<li>⑥、编辑 /etc/profile 文件，使用快捷键到底文档的最末行[<code>G</code>]和最首行[<code>gg</code>],注意这些都是在正常模式下执行的。</li>
+<li>⑦、在一个文件中输入  “hello” ,然后又撤销这个动作，在正常模式下输入 <code>u</code></li>
+</ul>
+<h4 id="B、插入模式"><a href="#B、插入模式" class="headerlink" title="B、插入模式"></a><strong>B、插入模式</strong></h4><p>在模式下，程序员可以输入内容。<br>按下 i, I, o, O, a, A, r, R 等任何一个字母之后才会进入编辑模式,  一般来说按 i 即可</p>
+<h4 id="C、命令行模式"><a href="#C、命令行模式" class="headerlink" title="C、命令行模式"></a><strong>C、命令行模式</strong></h4><p>在这个模式当中， 可以提供你相关指令，完成读取、存盘、替换、离开 vim 、显示行号等的动作则是在此模式中达成的！</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/thibault/picpic/raw/master/20191012110638663.png" alt="在这里插入图片描述"></p>
+<h4 id="举例说明"><a href="#举例说明" class="headerlink" title="举例说明:"></a><strong>举例说明:</strong></h4><p>编辑    /etc/profile 文件，并将光标移动到    第 20 行    shift+g<br>第一步：显示行号 <strong>:set nu</strong><br>第二步：输入 <strong>20</strong><br>这个数第三步:    输入 <strong>shift+g</strong></p>
+<h3 id="4、重启与关机"><a href="#4、重启与关机" class="headerlink" title="4、重启与关机"></a><strong>4、重启与关机</strong></h3><h3 id="shutdown指令："><a href="#shutdown指令：" class="headerlink" title="shutdown指令："></a><strong>shutdown指令：</strong></h3><ul>
+<li><code>shutdown -h now</code> ：表示立即关机</li>
+<li><code>shutdown -h 1</code> :表示1分钟后关机</li>
+<li><code>shutdown -r now</code> :立即重启</li>
+<li><code>shutdown</code> :直接使用，其实就是等价于关机</li>
+</ul>
+<h4 id="reboot指令："><a href="#reboot指令：" class="headerlink" title="reboot指令："></a><strong>reboot指令：</strong></h4><ul>
+<li><code>reboot</code>：重启系统<h4 id="相关指令"><a href="#相关指令" class="headerlink" title="相关指令"></a><strong>相关指令</strong></h4></li>
+<li><code>syn</code>：把内存的数据同步到磁盘（关机前进行同步数据）</li>
+<li><code>halt</code>：立刻关机</li>
+</ul>
+<h3 id="【补充说明】："><a href="#【补充说明】：" class="headerlink" title="【补充说明】："></a>【补充说明】：</h3><p> 登录时尽量少用 root 帐号登录，因为它是系统管理员，最大的权限，避免操作失误。可以利用普通用户登录，登录后再用<code>su -  用户名</code>命令来切换成系统管理员身份.<br>在提示符下输入 <code>logout</code> 即可注销用户</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Thibault</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://thibault-wch.github.io/2021/05/10/LINUX_1_%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86/">https://thibault-wch.github.io/2021/05/10/LINUX_1_%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://thibault-wch.github.io" target="_blank">MR.THIBAULT'S AIRSHIP</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/LINUX/">LINUX</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/05/10/LINUX_2_%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/"><img class="prev-cover" data-lazy-src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">LINUX2-用户管理</div></div></a></div><div class="next-post pull-right"><a href="/2021/05/10/%E5%8A%A8%E6%89%8B%E5%AD%A6%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0Pytorch_7_%E6%A8%A1%E5%9E%8B%E9%80%89%E6%8B%A9/"><img class="next-cover" data-lazy-src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">动手学深度学习（Pytorch）7-模型选择</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2021/05/10/LINUX_2_用户管理/" title="LINUX2-用户管理"><img class="cover" data-lazy-src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-05-10</div><div class="title">LINUX2-用户管理</div></div></a></div><div><a href="/2021/05/10/LINUX_3_实用指令/" title="LINUX3-实用指令"><img class="cover" data-lazy-src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-05-10</div><div class="title">LINUX3-实用指令</div></div></a></div><div><a href="/2021/05/10/LINUX_4_组管理和权限管理/" title="LINUX4-组管理和权限管理"><img class="cover" data-lazy-src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-05-10</div><div class="title">LINUX4-组管理和权限管理</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="lv-container" data-id="city" data-uid="MTAyMC81MzM4Mi8yOTg1Ng=="></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" data-lazy-src="/img/myicon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Thibault</div><div class="author-info__description">Hi!</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">14</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/thibault-wch"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/thibault-wch" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="/girrel@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">Mr.Thibault is talking here.</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E9%A2%84%E5%85%88%E7%9F%A5%E8%AF%86"><span class="toc-number">1.</span> <span class="toc-text">1、预先知识</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E6%96%87%E4%BB%B6%E8%A1%A8%E7%A4%BA"><span class="toc-number">2.</span> <span class="toc-text">2、文件表示</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81vi-vim%E6%9F%A5%E7%9C%8B"><span class="toc-number">3.</span> <span class="toc-text">3、vi&#x2F;vim查看</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#A%E3%80%81%E6%AD%A3%E5%B8%B8%E6%A8%A1%E5%BC%8F"><span class="toc-number">3.1.</span> <span class="toc-text">A、正常模式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#B%E3%80%81%E6%8F%92%E5%85%A5%E6%A8%A1%E5%BC%8F"><span class="toc-number">3.2.</span> <span class="toc-text">B、插入模式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#C%E3%80%81%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%A8%A1%E5%BC%8F"><span class="toc-number">3.3.</span> <span class="toc-text">C、命令行模式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%BE%E4%BE%8B%E8%AF%B4%E6%98%8E"><span class="toc-number">3.4.</span> <span class="toc-text">举例说明:</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E9%87%8D%E5%90%AF%E4%B8%8E%E5%85%B3%E6%9C%BA"><span class="toc-number">4.</span> <span class="toc-text">4、重启与关机</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#shutdown%E6%8C%87%E4%BB%A4%EF%BC%9A"><span class="toc-number">5.</span> <span class="toc-text">shutdown指令：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#reboot%E6%8C%87%E4%BB%A4%EF%BC%9A"><span class="toc-number">5.1.</span> <span class="toc-text">reboot指令：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9B%B8%E5%85%B3%E6%8C%87%E4%BB%A4"><span class="toc-number">5.2.</span> <span class="toc-text">相关指令</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90%E8%A1%A5%E5%85%85%E8%AF%B4%E6%98%8E%E3%80%91%EF%BC%9A"><span class="toc-number">6.</span> <span class="toc-text">【补充说明】：</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/05/10/LINUX_4_%E7%BB%84%E7%AE%A1%E7%90%86%E5%92%8C%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86/" title="LINUX4-组管理和权限管理">LINUX4-组管理和权限管理</a><time datetime="2021-05-10T09:11:00.098Z" title="发表于 2021-05-10 17:11:00">2021-05-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/05/10/LINUX_3_%E5%AE%9E%E7%94%A8%E6%8C%87%E4%BB%A4/" title="LINUX3-实用指令">LINUX3-实用指令</a><time datetime="2021-05-10T09:09:06.524Z" title="发表于 2021-05-10 17:09:06">2021-05-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/05/10/LINUX_2_%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/" title="LINUX2-用户管理">LINUX2-用户管理</a><time datetime="2021-05-10T09:06:02.163Z" title="发表于 2021-05-10 17:06:02">2021-05-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/05/10/LINUX_1_%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86/" title="LINUX1-基本知识">LINUX1-基本知识</a><time datetime="2021-05-10T09:03:20.256Z" title="发表于 2021-05-10 17:03:20">2021-05-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/05/10/%E5%8A%A8%E6%89%8B%E5%AD%A6%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0Pytorch_7_%E6%A8%A1%E5%9E%8B%E9%80%89%E6%8B%A9/" title="动手学深度学习（Pytorch）7-模型选择">动手学深度学习（Pytorch）7-模型选择</a><time datetime="2021-05-10T08:39:15.335Z" title="发表于 2021-05-10 16:39:15">2021-05-10</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2021 By Thibault</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to listen me!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    loader: {
+      source: {
+        '[tex]/amsCd': '[tex]/amscd'
+      }
+    },
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]],
+      tags: 'ams'
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, ''],
+        addClass: [200,() => {
+          document.querySelectorAll('mjx-container:not([display=\'true\']').forEach( node => {
+            const target = node.parentNode
+            if (!target.classList.contains('has-jax')) {
+              target.classList.add('mathjax-overflow')
+            }
+          })
+        }, '', false]
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typeset()
+}</script><script>if (document.getElementsByClassName('mermaid').length) {
+  if (window.mermaidJsLoad) mermaid.init()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(() => {
+      window.mermaidJsLoad = true
+      mermaid.initialize({
+        theme: 'neutral',
+      })
+      true && mermaid.init()
+    })
+  }
+}</script><script>function loadLivere () {
+  if (typeof LivereTower === 'object') {
+    window.LivereTower.init()
+  }
+  else {
+    (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  }
+}
+
+if ('Livere' === 'Livere' || !false) {
+  if (false) btf.loadComment(document.getElementById('lv-container'), loadLivere)
+  else loadLivere()
+}
+else {
+  function loadOtherComment () {
+    loadLivere()
+  }
+}</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script> <script src="https://myhkw.cn/api/player/162011552365" id="myhk" key="162011552365" m="1"></script><div class="aplayer no-destroy" data-id="5471894176" data-server="netease" data-type="playlist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="true" muted></div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+  'title',
+  '#config_change',
+  '#body-wrap',
+  '#rightside-config-hide',
+  '#rightside-config-show',
+  '.js-pjax'
+]
+
+if (true) {
+  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
+}
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  if (typeof gtag === 'function') {
+    gtag('config', '', {'page_path': window.location.pathname});
+  }
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // Analytics
+  if (false) {
+    MtaH5.pgv()
+  }
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+
+document.addEventListener('pjax:send', function () {
+  typeof preloader === 'object' && preloader.initLoading()
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+})</script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
