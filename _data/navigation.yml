@@ -6,14 +6,11 @@ main:
   - title: "News"
     url: "/#-news"
 
-  - title: "Selected Publications"
-    url: "/#-selected-publications"
+  - title: "Publications"
+    url: "/#publications"
 
   - title: "Honors and Awards"
     url: "/#-honors-and-awards"
-
-  - title: "Educations"
-    url: "/#-educations"
 
   - title: "Social Activities"
     url: "/#-social-activities"
