@@ -3,11 +3,14 @@ main:
   - title: "About Me"
     url: "/#about-me"
 
+  - title: "Publications"
+    url: "/publications"
+
   - title: "News"
     url: "/#-news"
 
-  - title: "Publications"
-    url: "/#-publications"
+  - title: "Selected Publications"
+    url: "/#-selected-publications"
 
   - title: "Honors and Awards"
     url: "/#-honors-and-awards"
@@ -15,8 +18,5 @@ main:
   - title: "Educations"
     url: "/#-educations"
 
-  - title: "Invited Talks"
-    url: "/#-invited-talks"
-
-  - title: "Internships"
-    url: "/#-internships"
+  - title: "Social Activities"
+    url: "/#-social-activities"
