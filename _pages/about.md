@@ -18,7 +18,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-I am in the third year of my Ph.D. program in Biomedical Engineering at the [Institute of Science and Technology for Brain-inspired Intelligence](https://istbi.fudan.edu.cn/), Fudan University, under the supervision of [Hongming Shan](http://hmshan.io/). I received my Bachelor's degree in Software Engineering from the [School of Computer Science and Artificial Intelligence](http://cst.whut.edu.cn/) at Wuhan University of Technology in 2021, with a GPA of 4.4 out of 5.0 (Top 0.6%).
+I am in the third year of my Ph.D. program in Biomedical Engineering (BME) at the [Institute of Science and Technology for Brain-inspired Intelligence](https://istbi.fudan.edu.cn/), Fudan University, under the supervision of [Hongming Shan](http://hmshan.io/). I received my Bachelor's degree in Software Engineering (SE) from the [School of Computer Science and Artificial Intelligence](http://cst.whut.edu.cn/) at Wuhan University of Technology in 2021, with a GPA of 4.4 out of 5.0 (Top 0.6%).
 
 
 My research interest includes [medical image analysis](https://scholar.google.com/citations?view_op=search_authors&hl=zh-CN&mauthors=label:medical_image_analysis), [computer vision](https://scholar.google.com/citations?view_op=search_authors&hl=zh-CN&mauthors=label:computer_vision), and [human-centered AI](https://scholar.google.com/citations?view_op=search_authors&hl=zh-CN&mauthors=label:human_centered_ai).
