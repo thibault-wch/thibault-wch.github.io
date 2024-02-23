@@ -37,6 +37,8 @@ My research interest includes [medical image analysis](https://scholar.google.co
 
 **Chenhui Wang**, Yiming Lei, Tao Chen, Junping Zhang, Yuxin Li<sup>†</sup>, Hongming Shan<sup>†</sup>
 
+IEEE Journal of Biomedical and Health Informatics, 2024 (In Press)
+
 [[**doi**]](https://ieeexplore.ieee.org/document/10412338) [[**arxiv**]](https://arxiv.org/pdf/2401.10966.pdf) [[**code**]](https://github.com/thibault-wch/HOPE-for-mild-cognitive-impairment)
 <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
 </div>
@@ -48,6 +50,8 @@ My research interest includes [medical image analysis](https://scholar.google.co
 [Joint learning framework of cross-modal synthesis and diagnosis for Alzheimer’s disease by mining underlying shared modality information](https://doi.org/10.1016/j.media.2023.103032)
 
 **Chenhui Wang**, Sirong Piao, Zhizhong Huang, Qi Gao, Junping Zhang, Yuxin Li<sup>†</sup>, Hongming Shan<sup>†</sup>
+
+Medical Image Analysis, 91(2024), 103032, 2024
 
 [[**doi**]](https://doi.org/10.1016/j.media.2023.103032) [[**supp**]](https://github.com/thibault-wch/Joint-Learning-for-Alzheimer-disease/blob/main/readme_files/main_supp.pdf) [[**code**]](https://github.com/thibault-wch/Joint-Learning-for-Alzheimer-disease)
 <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
