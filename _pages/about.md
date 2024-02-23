@@ -24,9 +24,9 @@ I am in the third year of my Ph.D. program in Biomedical Engineering (BME) at th
 My research interest includes [medical image analysis](https://scholar.google.com/citations?view_op=search_authors&hl=zh-CN&mauthors=label:medical_image_analysis), [computer vision](https://scholar.google.com/citations?view_op=search_authors&hl=zh-CN&mauthors=label:computer_vision), and [human-centered AI](https://scholar.google.com/citations?view_op=search_authors&hl=zh-CN&mauthors=label:human_centered_ai).
 
 # 🔥 News
-- *2024.01*: &nbsp;🎉🎉 HOPE for progression prediction of MCI is accepted by IEEE JBHI. [[link]](https://ieeexplore.ieee.org/document/10412338)
-- *2023.11*: &nbsp;🎉🎉 Joint learning framework for Alzheimer's disease is accepted by MedIA. [[link]](https://www.sciencedirect.com/science/article/pii/S136184152300292X?via%3Dihub)
-- *2023.06*: &nbsp;🎉🎉 BerDiff for medical image segmentation is accepted by MICCAI 2023. [[link]](https://doi.org/10.1007/978-3-031-43901-8_47)
+- *2024.01*: &nbsp;🎉🎉 <em>HOPE for progression prediction of MCI</em> is accepted by **IEEE JBHI**. [[link]](https://ieeexplore.ieee.org/document/10412338)
+- *2023.11*: &nbsp;🎉🎉 <em>Joint learning framework for Alzheimer's disease</em> is accepted by **MedIA**. [[link]](https://www.sciencedirect.com/science/article/pii/S136184152300292X?via%3Dihub)
+- *2023.06*: &nbsp;🎉🎉 <em>BerDiff for medical image segmentation</em> is accepted by **MICCAI**. [[link]](https://doi.org/10.1007/978-3-031-43901-8_47)
 
 # 📝 Publications 
 
@@ -37,7 +37,7 @@ My research interest includes [medical image analysis](https://scholar.google.co
 
 **Chenhui Wang**, Yiming Lei, Tao Chen, Junping Zhang, Yuxin Li<sup>†</sup>, Hongming Shan<sup>†</sup>
 
-[[**doi**]](https://ieeexplore.ieee.org/document/10412338) [[**arxiv**]](https://arxiv.org/abs/2401.10966)[[**code**]](https://github.com/thibault-wch/HOPE-for-mild-cognitive-impairment)
+[[**doi**]](https://ieeexplore.ieee.org/document/10412338) [[**arxiv**]](https://arxiv.org/abs/2401.10966.pdf) [[**code**]](https://github.com/thibault-wch/HOPE-for-mild-cognitive-impairment)
 <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
 </div>
 </div>
@@ -49,12 +49,13 @@ My research interest includes [medical image analysis](https://scholar.google.co
 
 **Chenhui Wang**, Sirong Piao, Zhizhong Huang, Qi Gao, Junping Zhang, Yuxin Li<sup>†</sup>, Hongming Shan<sup>†</sup>
 
-[[**doi**]](https://doi.org/10.1016/j.media.2023.103032) [[**supp**]](https://github.com/thibault-wch/Joint-Learning-for-Alzheimer-disease/blob/main/readme_files/main_supp.pdf)[[**code**]](https://github.com/thibault-wch/Joint-Learning-for-Alzheimer-disease)
+[[**doi**]](https://doi.org/10.1016/j.media.2023.103032) [[**supp**]](https://github.com/thibault-wch/Joint-Learning-for-Alzheimer-disease/blob/main/readme_files/main_supp.pdf) [[**code**]](https://github.com/thibault-wch/Joint-Learning-for-Alzheimer-disease)
 <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
 </div>
 </div>
 
-- [BerDiff: Conditional Bernoulli Diffusion Model for Medical Image Segmentation](https://doi.org/10.1007/978-3-031-43901-8_47), Tao Chen, **Chenhui Wang**, Hongming Shan<sup>†</sup>, MICCAI 2023.
+- [**MICCAI 2023**] BerDiff: Conditional Bernoulli Diffusion Model for Medical Image Segmentation, Tao Chen, **Chenhui Wang**, Hongming Shan<sup>†</sup>, MICCAI 2023. [[**doi**]](https://doi.org/10.1007/978-3-031-43901-8_47) [[**arxiv**]](https://arxiv.org/pdf/2304.04429.pdf)[[**code**]](https://github.com/takimailto/BerDiff) 
+
 
 # 🎖 Honors and Awards
 - *2021.10* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
