@@ -37,7 +37,7 @@ My research interest includes [medical image analysis](https://scholar.google.co
 
 **Chenhui Wang**, Yiming Lei, Tao Chen, Junping Zhang, Yuxin Li<sup>†</sup>, Hongming Shan<sup>†</sup>
 
-IEEE Journal of Biomedical and Health Informatics, 2024 (In Press)
+IEEE Journal of Biomedical and Health Informatics, 2024 (In Press) (<span style="color:blue">SCI Q1<span>)
 
 [[**doi**]](https://ieeexplore.ieee.org/document/10412338) [[**arxiv**]](https://arxiv.org/pdf/2401.10966.pdf) [[**code**]](https://github.com/thibault-wch/HOPE-for-mild-cognitive-impairment)
 <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
@@ -51,14 +51,14 @@ IEEE Journal of Biomedical and Health Informatics, 2024 (In Press)
 
 **Chenhui Wang**, Sirong Piao, Zhizhong Huang, Qi Gao, Junping Zhang, Yuxin Li<sup>†</sup>, Hongming Shan<sup>†</sup>
 
-Medical Image Analysis, 91(2024), 103032, 2024
+Medical Image Analysis, 91, 103032, 2024 (<span style="color:blue">SCI Q1 Top<span>)
 
 [[**doi**]](https://doi.org/10.1016/j.media.2023.103032) [[**supp**]](https://github.com/thibault-wch/Joint-Learning-for-Alzheimer-disease/blob/main/readme_files/main_supp.pdf) [[**code**]](https://github.com/thibault-wch/Joint-Learning-for-Alzheimer-disease)
 <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
 </div>
 </div>
 
-- [**MICCAI 2023**] BerDiff: Conditional Bernoulli Diffusion Model for Medical Image Segmentation, Tao Chen, **Chenhui Wang**, Hongming Shan<sup>†</sup>. [[**doi**]](https://doi.org/10.1007/978-3-031-43901-8_47) [[**arxiv**]](https://arxiv.org/pdf/2304.04429.pdf) [[**code**]](https://github.com/takimailto/BerDiff) 
+- [**MICCAI 2023**] BerDiff: Conditional Bernoulli Diffusion Model for Medical Image Segmentation, Tao Chen, **Chenhui Wang**, Hongming Shan<sup>†</sup>. (<span style="color:blue">CCF B<span>) [[**doi**]](https://doi.org/10.1007/978-3-031-43901-8_47) [[**arxiv**]](https://arxiv.org/pdf/2304.04429.pdf) [[**code**]](https://github.com/takimailto/BerDiff) 
 
 
 # 🎖 Honors and Awards
