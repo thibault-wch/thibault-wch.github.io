@@ -37,7 +37,7 @@ My research interest includes [medical image analysis](https://scholar.google.co
 
 **Chenhui Wang**, Yiming Lei, Tao Chen, Junping Zhang, Yuxin Li<sup>†</sup>, Hongming Shan<sup>†</sup>
 
-[[**doi**]](https://ieeexplore.ieee.org/document/10412338) [[**arxiv**]](https://arxiv.org/abs/2401.10966.pdf) [[**code**]](https://github.com/thibault-wch/HOPE-for-mild-cognitive-impairment)
+[[**doi**]](https://ieeexplore.ieee.org/document/10412338) [[**arxiv**]](https://arxiv.org/pdf/2401.10966.pdf) [[**code**]](https://github.com/thibault-wch/HOPE-for-mild-cognitive-impairment)
 <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
 </div>
 </div>
@@ -54,7 +54,7 @@ My research interest includes [medical image analysis](https://scholar.google.co
 </div>
 </div>
 
-- [**MICCAI 2023**] BerDiff: Conditional Bernoulli Diffusion Model for Medical Image Segmentation, Tao Chen, **Chenhui Wang**, Hongming Shan<sup>†</sup>, MICCAI 2023. [[**doi**]](https://doi.org/10.1007/978-3-031-43901-8_47) [[**arxiv**]](https://arxiv.org/pdf/2304.04429.pdf)[[**code**]](https://github.com/takimailto/BerDiff) 
+- [**MICCAI 2023**] BerDiff: Conditional Bernoulli Diffusion Model for Medical Image Segmentation, Tao Chen, **Chenhui Wang**, Hongming Shan<sup>†</sup>. [[**doi**]](https://doi.org/10.1007/978-3-031-43901-8_47) [[**arxiv**]](https://arxiv.org/pdf/2304.04429.pdf)[[**code**]](https://github.com/takimailto/BerDiff) 
 
 
 # 🎖 Honors and Awards
