@@ -58,7 +58,7 @@ Medical Image Analysis, 91(2024), 103032, 2024
 </div>
 </div>
 
-- [**MICCAI 2023**] BerDiff: Conditional Bernoulli Diffusion Model for Medical Image Segmentation, Tao Chen, **Chenhui Wang**, Hongming Shan<sup>†</sup>. [[**doi**]](https://doi.org/10.1007/978-3-031-43901-8_47) [[**arxiv**]](https://arxiv.org/pdf/2304.04429.pdf)[[**code**]](https://github.com/takimailto/BerDiff) 
+- [**MICCAI 2023**] BerDiff: Conditional Bernoulli Diffusion Model for Medical Image Segmentation, Tao Chen, **Chenhui Wang**, Hongming Shan<sup>†</sup>. [[**doi**]](https://doi.org/10.1007/978-3-031-43901-8_47) [[**arxiv**]](https://arxiv.org/pdf/2304.04429.pdf) [[**code**]](https://github.com/takimailto/BerDiff) 
 
 
 # 🎖 Honors and Awards
