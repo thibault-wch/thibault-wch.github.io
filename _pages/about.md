@@ -42,7 +42,7 @@ My research interest includes [medical image analysis](https://scholar.google.co
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">MedIA 2024</div><img src='images/JointLearning.jpg' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">MedIA 2024</div><img src='images/JointLearning.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [Joint learning framework of cross-modal synthesis and diagnosis for Alzheimer’s disease by mining underlying shared modality information](https://doi.org/10.1016/j.media.2023.103032)
