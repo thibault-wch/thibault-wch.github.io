@@ -24,24 +24,37 @@ I am in the third year of my Ph.D. program in Biomedical Engineering (BME) at th
 My research interest includes [medical image analysis](https://scholar.google.com/citations?view_op=search_authors&hl=zh-CN&mauthors=label:medical_image_analysis), [computer vision](https://scholar.google.com/citations?view_op=search_authors&hl=zh-CN&mauthors=label:computer_vision), and [human-centered AI](https://scholar.google.com/citations?view_op=search_authors&hl=zh-CN&mauthors=label:human_centered_ai).
 
 # 🔥 News
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+- *2024.01*: &nbsp;🎉🎉 HOPE for progression prediction of MCI is accepted by IEEE JBHI. [[link]](https://ieeexplore.ieee.org/document/10412338)
+- *2023.11*: &nbsp;🎉🎉 Joint learning framework for Alzheimer's disease is accepted by MedIA. [[link]](https://www.sciencedirect.com/science/article/pii/S136184152300292X?via%3Dihub)
+- *2023.06*: &nbsp;🎉🎉 BerDiff for medical image segmentation is accepted by MICCAI 2023. [[link]](https://doi.org/10.1007/978-3-031-43901-8_47)
 
 # 📝 Publications 
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">IEEE JBHI 2024</div><img src='images/HOPE.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[Deep Residual Learning for Image Recognition](https://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf)
+[HOPE: Hybrid-granularity Ordinal Prototype Learning for Progression Prediction of Mild Cognitive Impairment](https://ieeexplore.ieee.org/document/10412338)
 
-**Kaiming He**, Xiangyu Zhang, Shaoqing Ren, Jian Sun
+**Chenhui Wang**, Yiming Lei, Tao Chen, Junping Zhang, Yuxin Li<sup>†</sup>, Hongming Shan<sup>†</sup>
 
-[**Project**](https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=DhtAFkwAAAAJ&citation_for_view=DhtAFkwAAAAJ:ALROH1vI_8AC) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+[[**doi**]](https://ieeexplore.ieee.org/document/10412338) [[**arxiv**]](https://arxiv.org/abs/2401.10966)[[**code**]](https://github.com/thibault-wch/HOPE-for-mild-cognitive-impairment)
+<strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
 </div>
 </div>
 
-- [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020**
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">MedIA 2024</div><img src='images/JointLearning.jpg' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Joint learning framework of cross-modal synthesis and diagnosis for Alzheimer’s disease by mining underlying shared modality information](https://doi.org/10.1016/j.media.2023.103032)
+
+**Chenhui Wang**, Sirong Piao, Zhizhong Huang, Qi Gao, Junping Zhang, Yuxin Li<sup>†</sup>, Hongming Shan<sup>†</sup>
+
+[[**doi**]](https://doi.org/10.1016/j.media.2023.103032) [[**supp**]](https://github.com/thibault-wch/Joint-Learning-for-Alzheimer-disease/blob/main/readme_files/main_supp.pdf)[[**code**]](https://github.com/thibault-wch/Joint-Learning-for-Alzheimer-disease)
+<strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
+</div>
+</div>
+
+- [BerDiff: Conditional Bernoulli Diffusion Model for Medical Image Segmentation](https://doi.org/10.1007/978-3-031-43901-8_47), Tao Chen, **Chenhui Wang**, Hongming Shan<sup>†</sup>, MICCAI 2023.
 
 # 🎖 Honors and Awards
 - *2021.10* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
