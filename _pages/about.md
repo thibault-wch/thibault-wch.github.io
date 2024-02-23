@@ -24,9 +24,9 @@ I am in the third year of my Ph.D. program in Biomedical Engineering (BME) at th
 My research interest includes [medical image analysis](https://scholar.google.com/citations?view_op=search_authors&hl=zh-CN&mauthors=label:medical_image_analysis), [computer vision](https://scholar.google.com/citations?view_op=search_authors&hl=zh-CN&mauthors=label:computer_vision), and [human-centered AI](https://scholar.google.com/citations?view_op=search_authors&hl=zh-CN&mauthors=label:human_centered_ai).
 
 # 🔥 News
-- *2024.01*: &nbsp;🎉🎉 <em>HOPE for progression prediction of MCI</em> is accepted by **IEEE JBHI** (SCI Q1). [[link]](https://ieeexplore.ieee.org/document/10412338)
-- *2023.11*: &nbsp;🎉🎉 <em>Joint learning framework for Alzheimer's disease</em> is accepted by **MedIA** (SCI Q1 Top). [[link]](https://www.sciencedirect.com/science/article/pii/S136184152300292X?via%3Dihub)
-- *2023.06*: &nbsp;🍾🍾 Congrats to Tao. <em>BerDiff for medical image segmentation</em> is accepted by **MICCAI** (CCF B). [[link]](https://doi.org/10.1007/978-3-031-43901-8_47)
+- *2024.01*: &nbsp;🎉🎉 <em>HOPE for progression prediction of MCI</em> is accepted by **IEEE JBHI** (<span style="color:blue">SCI Q1<span>). [[link]](https://ieeexplore.ieee.org/document/10412338)
+- *2023.11*: &nbsp;🎉🎉 <em>Joint learning framework for Alzheimer's disease</em> is accepted by **MedIA** (<span style="color:blue">SCI Q1 Top<span>). [[link]](https://www.sciencedirect.com/science/article/pii/S136184152300292X?via%3Dihub)
+- *2023.06*: &nbsp;🍾🍾 Congrats to Tao. <em>BerDiff for medical image segmentation</em> is accepted by **MICCAI** (<span style="color:blue">CCF B<span>). [[link]](https://doi.org/10.1007/978-3-031-43901-8_47)
 
 # 📝 Publications 
 
