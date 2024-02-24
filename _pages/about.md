@@ -64,7 +64,7 @@ Medical Image Analysis, 91, 103032, 2024 (<span style="color:blue">SCI Q1 Top</s
 # 🎖 Honors and Awards
 - *May 2023*  Outstanding Member of the Communist Youth League at Fudan University.
 - *May 2021*  Top Ten Outstanding Students of Wuhan University of Technology in 2021. (<span style="color:blue">0.01%</span>)
-- *Sep. 2020*  Excellence Scholarship. (<span style="color:blue">0.1%</span>)
+- *Sep. 2020*  Excellence Scholarship of Wuhan University of Technology. (<span style="color:blue">0.1%</span>)
 - *2017-2019*  National Scholarship. (two consecutive years, <span style="color:blue">0.3%</span>)
 
 # 💪 Social Activities
