@@ -68,7 +68,7 @@ Medical Image Analysis, 91, 103032, 2024 (<span style="color:blue">SCI Q1 Top</s
 - *2017-2019*  National Scholarship. (two consecutive years, <span style="color:blue">0.3%</span>)
 
 # 💪 Social Activities
-- Served as a Reviewer for [*MICCAI 2024*](https://conferences.miccai.org/2024/en/åå), [*IEEE ACCESS*](https://ieeeaccess.ieee.org/) and [*CCPE*](https://onlinelibrary.wiley.com/journal/15320634).
+- Served as a Reviewer for [*MICCAI 2024*](https://conferences.miccai.org/2024/en), [*IEEE ACCESS*](https://ieeeaccess.ieee.org/) and [*CCPE*](https://onlinelibrary.wiley.com/journal/15320634).
 - Achieved the <span style="color:blue">National First Prize</span> in the [*Chinese Collegiate Computing Competition*](https://jsjds.blcu.edu.cn/) of 2020, and secured the  <span style="color:blue">International Second Prize</span> in the [*ASC20-21 Asian Student Supercomputer Challenge*](http://www.asc-events.org/StudentChallenge/index.html).
 - Volunteered as a Teaching Support Instructor in rural Dangyang City, Hubei Province, China, in 2018.
 
