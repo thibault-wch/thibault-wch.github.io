@@ -38,7 +38,7 @@ My research interest includes [medical image analysis](https://scholar.google.co
 
 **Chenhui Wang**, Tao Chen, Zhihao Chen, Zhizhong Huang, Taoran Jiang, Qi Wang, Hongming Shan<sup>†</sup>
 
-International Joint Conference on Artificial  Intelligence (IJCAI), 2024 (In Press) (<span style="color:blue">CCF A</span>)
+International Joint Conference on Artificial  Intelligence (IJCAI), 2024 (<span style="color:blue">CCF A</span>)
 
 [[**doi**]](https://arxiv.org/abs/2404.14162) [[**arxiv**]](https://arxiv.org/abs/2404.14162)  Cooperation with <span style="color:blue">Suzhou Xiangji Technology Service Co., Ltd.</span>
 <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
