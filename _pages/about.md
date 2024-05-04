@@ -40,7 +40,7 @@ My research interest includes [medical image analysis](https://scholar.google.co
 
 International Joint Conference on Artificial  Intelligence (IJCAI), 2024 (<span style="color:blue">CCF A</span>)
 
-[[**doi**]](https://arxiv.org/abs/2404.14162) [[**arxiv**]](https://arxiv.org/abs/2404.14162)  Cooperation with <span style="color:blue">Suzhou Xiangji Technology Service Co., Ltd.</span>
+[[**doi**]](https://arxiv.org/abs/2404.14162) [[**arxiv**]](https://arxiv.org/abs/2404.14162) [[**news**]](https://mp.weixin.qq.com/s?__biz=MzIwNzc2NTk0NQ%3D%3D&mid=2247583547&idx=3&sn=3e38c59b87b6c009c1436628e43bd5a7&ref=openi.cn)  Cooperation with <span style="color:blue">Suzhou Xiangji Technology Service Co., Ltd.</span>
 <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
 </div>
 </div>
