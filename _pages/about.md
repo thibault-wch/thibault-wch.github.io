@@ -77,10 +77,10 @@ Medical Image Analysis, 91, 103032, 2024 (<span style="color:blue">SCI Q1 Top</s
 
 
 # 🎖 Honors and Awards
-- *2022-2024*  Outstanding Member of the Communist Youth League at Fudan University. (<span style="color:blue">two consecutive years</span>)
-- *May 2021*  Top Ten Outstanding Students of Wuhan University of Technology in 2021. (<span style="color:blue">0.01%</span>)
-- *Sep. 2020*  Excellence Scholarship of Wuhan University of Technology. (<span style="color:blue">0.1%</span>)
-- *2017-2019*  National Scholarship. (<span style="color:blue">two consecutive years, 1%</span>)
+- *2022-2024*  <span style="color:blue">Outstanding Member of the Communist Youth League</span>  at Fudan University. (<span style="color:blue">two consecutive years</span>)
+- *May 2021*  <span style="color:blue">Top Ten Outstanding Students</span>  at Wuhan University of Technology. (<span style="color:blue">0.01%</span>)
+- *Sep. 2020*  <span style="color:blue">Excellence Scholarship</span> at Wuhan University of Technology. (<span style="color:blue">0.1%</span>)
+- *2017-2019*  <span style="color:blue">National Scholarship</span>. (<span style="color:blue">two consecutive years, 1%</span>)
 
 # 💪 Social Activities
 - Serving as a Reviewer for [*MICCAI 2024*](https://conferences.miccai.org/2024/en), [*IEEE ACCESS*](https://ieeeaccess.ieee.org/) and [*CCPE*](https://onlinelibrary.wiley.com/journal/15320634).
