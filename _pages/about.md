@@ -21,7 +21,7 @@ redirect_from:
 I am in the third year of my Ph.D. program in Biomedical Engineering (BME) at the [Institute of Science and Technology for Brain-inspired Intelligence](https://istbi.fudan.edu.cn/), Fudan University, under the supervision of [Hongming Shan](http://hmshan.io/). I received my Bachelor's degree in Software Engineering (SE) from the [School of Computer Science and Artificial Intelligence](http://cst.whut.edu.cn/) at Wuhan University of Technology in 2021, with a GPA of 4.4 out of 5.0 (<span style="color:blue">Top 0.6%</span>).
 
 
-My research interest includes [human-centered AI](https://scholar.google.com/citations?view_op=search_authors&hl=zh-CN&mauthors=label:human_centred_ai), [AI for neuroscience](https://scholar.google.com/citations?view_op=search_authors&hl=zh-CN&mauthors=label:ai_for_neuroscience), and [computer vision](https://scholar.google.com/citations?view_op=search_authors&hl=zh-CN&mauthors=label:computer_vision).
+My research interest includes [human-centred AI](https://scholar.google.com/citations?view_op=search_authors&hl=zh-CN&mauthors=label:human_centred_ai), [AI for neuroscience](https://scholar.google.com/citations?view_op=search_authors&hl=zh-CN&mauthors=label:ai_for_neuroscience), and [computer vision](https://scholar.google.com/citations?view_op=search_authors&hl=zh-CN&mauthors=label:computer_vision).
 
 # 🔥 News
 - *2024.04*: &nbsp;🎉🎉 <em>FLDM-VTON for image-based virtual try-on</em> is accepted by **IJCAI** (<span style="color:blue">CCF A</span>). [[link]](https://arxiv.org/abs/2404.14162)
