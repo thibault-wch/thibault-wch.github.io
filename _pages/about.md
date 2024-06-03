@@ -78,6 +78,7 @@ Medical Image Analysis, 91, 103032, 2024 (<span style="color:blue">SCI Q1 Top</s
 
 
 # 🎖 Honors and Awards
+- *June 2024*   <span style="color:blue">IJCAI Travel Grant</span> for *IJCAI 2024* in Jeju Island, South Korea.
 - *2022-2024*  <span style="color:blue">Outstanding Member of the Communist Youth League</span>  at Fudan University. (<span style="color:blue">two consecutive years</span>)
 - *May 2021*  <span style="color:blue">Top Ten Outstanding Students</span>  at Wuhan University of Technology. (<span style="color:blue">0.01%</span>)
 - *Sep. 2020*  <span style="color:blue">Excellence Scholarship</span> at Wuhan University of Technology. (<span style="color:blue">0.1%</span>)
