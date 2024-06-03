@@ -24,7 +24,7 @@ I am in the third year of my Ph.D. program in Biomedical Engineering (BME) at th
 My research interest includes [human-centred AI](https://scholar.google.com/citations?view_op=search_authors&hl=zh-CN&mauthors=label:human_centred_ai), [AI for neuroscience](https://scholar.google.com/citations?view_op=search_authors&hl=zh-CN&mauthors=label:ai_for_neuroscience), and [computer vision](https://scholar.google.com/citations?view_op=search_authors&hl=zh-CN&mauthors=label:computer_vision).
 
 # 🔥 News
-- *2024.06*: &nbsp;🥳🥳 Profoundly thank the <em>IJCAI Committee</em> for providing the <span style="color:blue">**IJCAI 2024 Travel Grant**</span>.
+- *2024.06*: &nbsp;🥳🥳 Profoundly thank the <em>IJCAI Committee</em> for providing the <span style="color:blue">**IJCAI 2024 Travel Grant**</span> in Jeju Island, South Korea.
 - *2024.04*: &nbsp;🎉🎉 <em>FLDM-VTON for image-based virtual try-on</em> is accepted by **IJCAI** (<span style="color:blue">CCF A</span>). [[link]](https://arxiv.org/abs/2404.14162)
 - *2024.01*: &nbsp;🎉🎉 <em>HOPE for progression prediction of MCI</em> is accepted by **IEEE JBHI** (<span style="color:blue">SCI Q1,IF=7.7</span>). [[link]](https://ieeexplore.ieee.org/document/10412338)
 - *2023.11*: &nbsp;🎉🎉 <em>Joint learning framework for Alzheimer's disease</em> is accepted by **MedIA** (<span style="color:blue">SCI Q1 Top,IF=10.9</span>). [[link]](https://www.sciencedirect.com/science/article/pii/S136184152300292X?via%3Dihub)
