@@ -76,8 +76,7 @@ Medical Image Analysis, 91, 103032, 2024 (<span style="color:blue">SCI Q1 Top</s
 </div>
 
 
-- [**IEEE TMI 2024**]
-- *2024.07*: &nbsp;🍾🍾 Congrats to Tao. <em>HiDiff: Hybrid Diffusion Framework for Medical Image Segmentation, Tao Chen, **Chenhui Wang**, Zhihao Chen, Yiming Lei<sup>†</sup>, Hongming Shan<sup>†</sup>. [[**doi**]](https://ieeexplore.ieee.org/document/10587153/) [[**arxiv**]](https://arxiv.org/pdf/2407.03548) [[**code**]](https://github.com/takimailto/HiDiff) 
+- [**IEEE TMI 2024**] HiDiff: Hybrid Diffusion Framework for Medical Image Segmentation, Tao Chen, **Chenhui Wang**, Zhihao Chen, Yiming Lei<sup>†</sup>, Hongming Shan<sup>†</sup>. [[**doi**]](https://ieeexplore.ieee.org/document/10587153/) [[**arxiv**]](https://arxiv.org/pdf/2407.03548) [[**code**]](https://github.com/takimailto/HiDiff) 
 
 - [**MICCAI 2023**] BerDiff: Conditional Bernoulli Diffusion Model for Medical Image Segmentation, Tao Chen, **Chenhui Wang**, Hongming Shan<sup>†</sup>. (<span style="color:blue">CCF B</span>) [[**doi**]](https://doi.org/10.1007/978-3-031-43901-8_47) [[**arxiv**]](https://arxiv.org/pdf/2304.04429.pdf) [[**code**]](https://github.com/takimailto/BerDiff) 
 
