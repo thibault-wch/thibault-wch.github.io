@@ -24,6 +24,7 @@ I am in the third year of my Ph.D. program in Biomedical Engineering (BME) at th
 My research interest includes [human-centred AI](https://scholar.google.com/citations?view_op=search_authors&hl=zh-CN&mauthors=label:human_centred_ai), [AI for neuroscience](https://scholar.google.com/citations?view_op=search_authors&hl=zh-CN&mauthors=label:ai_for_neuroscience), and [computer vision](https://scholar.google.com/citations?view_op=search_authors&hl=zh-CN&mauthors=label:computer_vision).
 
 # 🔥 News
+- *2024.07*: &nbsp;🍾🍾 Congrats to Tao. <em>HiDiff for medical image segmentation</em> is accepted by **IEEE TMI** (<span style="color:blue">SCI Q1 Top, IF=8.9</span>). [[link]](https://ieeexplore.ieee.org/document/10587153/)
 - *2024.06*: &nbsp;🥳🥳 Profoundly thank the <em>IJCAI Committee</em> for providing the <span style="color:blue">**IJCAI 2024 Travel Grant**</span> in Jeju Island, South Korea.
 - *2024.04*: &nbsp;🎉🎉 <em>FLDM-VTON for image-based virtual try-on</em> is accepted by **IJCAI** (<span style="color:blue">CCF A</span>). [[link]](https://arxiv.org/abs/2404.14162)
 - *2024.01*: &nbsp;🎉🎉 <em>HOPE for progression prediction of MCI</em> is accepted by **IEEE JBHI** (<span style="color:blue">SCI Q1,IF=7.7</span>). [[link]](https://ieeexplore.ieee.org/document/10412338)
@@ -73,6 +74,10 @@ Medical Image Analysis, 91, 103032, 2024 (<span style="color:blue">SCI Q1 Top</s
 <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
 </div>
 </div>
+
+
+- [**IEEE TMI 2024**]
+- *2024.07*: &nbsp;🍾🍾 Congrats to Tao. <em>HiDiff: Hybrid Diffusion Framework for Medical Image Segmentation, Tao Chen, **Chenhui Wang**, Zhihao Chen, Yiming Lei<sup>†</sup>, Hongming Shan<sup>†</sup>. [[**doi**]](https://ieeexplore.ieee.org/document/10587153/) [[**arxiv**]](https://arxiv.org/pdf/2407.03548) [[**code**]](https://github.com/takimailto/HiDiff) 
 
 - [**MICCAI 2023**] BerDiff: Conditional Bernoulli Diffusion Model for Medical Image Segmentation, Tao Chen, **Chenhui Wang**, Hongming Shan<sup>†</sup>. (<span style="color:blue">CCF B</span>) [[**doi**]](https://doi.org/10.1007/978-3-031-43901-8_47) [[**arxiv**]](https://arxiv.org/pdf/2304.04429.pdf) [[**code**]](https://github.com/takimailto/BerDiff) 
 
