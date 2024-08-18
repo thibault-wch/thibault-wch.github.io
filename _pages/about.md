@@ -24,6 +24,7 @@ I am in the third year of my Ph.D. program in Biomedical Engineering (BME) at th
 My research interest includes [human-centred AI](https://scholar.google.com/citations?view_op=search_authors&hl=zh-CN&mauthors=label:human_centred_ai), [AI for neuroscience](https://scholar.google.com/citations?view_op=search_authors&hl=zh-CN&mauthors=label:ai_for_neuroscience), and [computer vision](https://scholar.google.com/citations?view_op=search_authors&hl=zh-CN&mauthors=label:computer_vision).
 
 # 🔥 News
+- *2024.08*: &nbsp;🍾🍾 Congrats to Zhihao. <em>LEDA for Low-dose CT Denoising</em> is accepted by **BIBM** (<span style="color:blue">CCF B</span>). [[link]](https://arxiv.org/pdf/2403.06128)
 - *2024.07*: &nbsp;🍾🍾 Congrats to Tao. <em>HiDiff for medical image segmentation</em> is accepted by **IEEE TMI** (<span style="color:blue">SCI Q1 Top, IF=8.9</span>). [[link]](https://ieeexplore.ieee.org/document/10587153/)
 - *2024.06*: &nbsp;🥳🥳 Profoundly thank the <em>IJCAI Committee</em> for providing the <span style="color:blue">**IJCAI 2024 Travel Grant**</span> in Jeju Island, South Korea.
 - *2024.04*: &nbsp;🎉🎉 <em>FLDM-VTON for image-based virtual try-on</em> is accepted by **IJCAI** (<span style="color:blue">CCF A</span>). [[link]](https://arxiv.org/abs/2404.14162)
@@ -79,7 +80,7 @@ Medical Image Analysis, 91, 103032, 2024 (<span style="color:blue">SCI Q1 Top</s
 - [**IEEE TMI 2024**] HiDiff: Hybrid Diffusion Framework for Medical Image Segmentation, Tao Chen, **Chenhui Wang**, Zhihao Chen, Yiming Lei<sup>†</sup>, Hongming Shan<sup>†</sup>. [[**doi**]](https://ieeexplore.ieee.org/document/10587153/) [[**arxiv**]](https://arxiv.org/pdf/2407.03548) [[**code**]](https://github.com/takimailto/HiDiff) 
 
 - [**MICCAI 2023**] BerDiff: Conditional Bernoulli Diffusion Model for Medical Image Segmentation, Tao Chen, **Chenhui Wang**, Hongming Shan<sup>†</sup>. (<span style="color:blue">CCF B</span>) [[**doi**]](https://doi.org/10.1007/978-3-031-43901-8_47) [[**arxiv**]](https://arxiv.org/pdf/2304.04429.pdf) [[**code**]](https://github.com/takimailto/BerDiff) 
-
+- [**BIBM 2024**] Low-dose CT Denoising with Language-engaged Dual-space Alignment, Zhihao Chen, Tao Chen, **Chenhui Wang**, Chuang Niu, Ge Wang<sup>†</sup>, Hongming Shan<sup>†</sup>. (<span style="color:blue">CCF B</span>) [[**doi**]](https://arxiv.org/pdf/2403.06128) [[**arxiv**]](https://arxiv.org/pdf/2403.06128) [[**code**]](https://github.com/hao1635/LEDA)
 
 # 🎖 Honors and Awards
 - *June 2024*  <span style="color:blue">Travel Grant</span> from the *IJCAI committee* and <span style="color:blue">Overseas Participation Funding</span> from *Fudan University* to attend IJCAI 2024.
@@ -89,8 +90,8 @@ Medical Image Analysis, 91, 103032, 2024 (<span style="color:blue">SCI Q1 Top</s
 - *2017-2019*  <span style="color:blue">National Scholarship</span>. (<span style="color:blue">two consecutive years, 1%</span>)
 
 # 💪 Social Activities
-- Serving as a Reviewer for [*MICCAI 2024*](https://conferences.miccai.org/2024/en), [*IEEE TCSVT*](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=76), [*IEEE ACCESS*](https://ieeeaccess.ieee.org/) and [*CCPE*](https://onlinelibrary.wiley.com/journal/15320634).
-- Holding two <span style="color:blue">patents</span> (<span style="color:blue">CN 116364285 A</span>, <span style="color:blue">CN 117372796 A</span>).
+- Serving as a Reviewer for  [*BIBM 2024*](https://ieeebibm.org/BIBM2024/), [*MICCAI 2024*](https://conferences.miccai.org/2024/en), [*IEEE TCSVT*](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=76), [*IEEE ACCESS*](https://ieeeaccess.ieee.org/) and [*CCPE*](https://onlinelibrary.wiley.com/journal/15320634).
+- Holding three <span style="color:blue">patents</span> (<span style="color:blue">CN202210748948.X</span>, <span style="color:blue">CN202310278934.0</span>, <span style="color:blue">CN202410412376.7</span>).
 - Achieving the <span style="color:blue">National First Prize</span> in the [*Chinese Collegiate Computing Competition*](https://jsjds.blcu.edu.cn/) of 2020, and secured the  <span style="color:blue">International Second Prize</span> in the [*ASC20-21 Asian Student Supercomputer Challenge*](http://www.asc-events.org/StudentChallenge/index.html).
 - Volunteering as a Teaching Support Instructor in rural Dangyang City, Hubei Province, China, in 2018.
 
