@@ -24,6 +24,7 @@ I am in the fourth year of my Ph.D. program in Biomedical Engineering (BME) at t
 My research interest includes [human-centred AI](https://scholar.google.com/citations?view_op=search_authors&hl=zh-CN&mauthors=label:human_centred_ai), [AI for neuroscience](https://scholar.google.com/citations?view_op=search_authors&hl=zh-CN&mauthors=label:ai_for_neuroscience), and [computer vision](https://scholar.google.com/citations?view_op=search_authors&hl=zh-CN&mauthors=label:computer_vision).
 
 # 🔥 News
+- *2024.11*: &nbsp;🥳🥳 Extremely delighted to have received the <span style="color:blue">**Doctoral National Scholarship**</span>!
 - *2024.08*: &nbsp;🍾🍾 Congrats to Zhihao. <em>LEDA for Low-dose CT Denoising</em> is accepted by **BIBM** (short paper). [[link]](https://arxiv.org/pdf/2403.06128)
 - *2024.07*: &nbsp;🍾🍾 Congrats to Tao. <em>HiDiff for medical image segmentation</em> is accepted by **IEEE TMI** (<span style="color:blue">SCI Q1 Top, IF=8.9</span>). [[link]](https://ieeexplore.ieee.org/document/10587153/)
 - *2024.06*: &nbsp;🥳🥳 Profoundly thank the <em>IJCAI Committee</em> for providing the <span style="color:blue">**IJCAI 2024 Travel Grant**</span> in Jeju Island, South Korea.
@@ -82,6 +83,7 @@ Medical Image Analysis, 91, 103032, 2024 (<span style="color:blue">SCI Q1 Top</s
 - [**BIBM 2024**] Low-dose CT Denoising with Language-engaged Dual-space Alignment, Zhihao Chen, Tao Chen, **Chenhui Wang**, Chuang Niu, Ge Wang<sup>†</sup>, Hongming Shan<sup>†</sup>. (short paper) [[**doi**]](https://arxiv.org/pdf/2403.06128) [[**arxiv**]](https://arxiv.org/pdf/2403.06128) [[**code**]](https://github.com/hao1635/LEDA)
 
 # 🎖 Honors and Awards
+- *Nov. 2024* <span style="color:blue">Doctoral National Scholarship</span>.
 - *June 2024*  <span style="color:blue">Travel Grant</span> from the *IJCAI committee* and <span style="color:blue">Overseas Participation Funding</span> from *Fudan University* to attend IJCAI 2024.
 - *2022-2024*  <span style="color:blue">Outstanding Member of the Communist Youth League</span>  at Fudan University. (<span style="color:#9C27B0">**two consecutive years**</span>)
 - *May 2021*  <span style="color:blue">Top Ten Outstanding Students</span>  at Wuhan University of Technology. (<span style="color:blue">0.01%</span>)
