@@ -24,7 +24,7 @@ I am in the fourth year of my Ph.D. program in Biomedical Engineering (BME) at t
 My research interest includes [human-centred AI](https://scholar.google.com/citations?view_op=search_authors&hl=zh-CN&mauthors=label:human_centred_ai), [AI for neuroscience](https://scholar.google.com/citations?view_op=search_authors&hl=zh-CN&mauthors=label:ai_for_neuroscience), and [computer vision](https://scholar.google.com/citations?view_op=search_authors&hl=zh-CN&mauthors=label:computer_vision).
 
 # 🔥 News
-- *2024.11*: &nbsp;🥳🥳 Extremely delighted to have received the <span style="color:blue">**Doctoral National Scholarship**</span>!
+- *2024.11*: &nbsp;🥳🥳 Delighted to have received the <span style="color:blue">**Doctoral National Scholarship**</span>!
 - *2024.08*: &nbsp;🍾🍾 Congrats to Zhihao. <em>LEDA for Low-dose CT Denoising</em> is accepted by **BIBM** (short paper). [[link]](https://arxiv.org/pdf/2403.06128)
 - *2024.07*: &nbsp;🍾🍾 Congrats to Tao. <em>HiDiff for medical image segmentation</em> is accepted by **IEEE TMI** (<span style="color:blue">SCI Q1 Top, IF=8.9</span>). [[link]](https://ieeexplore.ieee.org/document/10587153/)
 - *2024.06*: &nbsp;🥳🥳 Profoundly thank the <em>IJCAI Committee</em> for providing the <span style="color:blue">**IJCAI 2024 Travel Grant**</span> in Jeju Island, South Korea.
