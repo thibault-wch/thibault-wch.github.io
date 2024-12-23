@@ -90,6 +90,7 @@ Medical Image Analysis, 91, 103032, 2024 (<span style="color:blue">SCI Q1 Top</s
 - *Sep. 2020*  <span style="color:blue">Excellence Scholarship</span> at Wuhan University of Technology. (<span style="color:blue">0.1%</span>)
 - *2017-2019*  <span style="color:blue">National Scholarship</span>. (<span style="color:#9C27B0">**two consecutive years, 1%**</span>)
 
+
 # 💪 Social Activities
 - Serving as a Reviewer for  [*MIDL*](https://www.midl.io/), [*IJCNN*](https://2025.ijcnn.org/), [*BIBM*](https://ieeebibm.org/BIBM2024/), [*MICCAI*](https://conferences.miccai.org/2024/en), [*MedIA*](https://www.sciencedirect.com/journal/medical-image-analysis), [*PR*](https://www.sciencedirect.com/journal/pattern-recognition), [*IEEE TCSVT*](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=76), [*AIIM*](https://www.sciencedirect.com/journal/artificial-intelligence-in-medicine), [*CAAI TIT*](https://ietresearch.onlinelibrary.wiley.com/journal/24682322), [*PRLETTERS*](https://www.sciencedirect.com/journal/pattern-recognition-letters), [*IEEE ACCESS*](https://ieeeaccess.ieee.org/) and [*CCPE*](https://onlinelibrary.wiley.com/journal/15320634).
 - Holding three <span style="color:blue">patents</span> (<span style="color:blue">CN202210748948.X</span>, <span style="color:blue">CN202310278934.0</span>, <span style="color:blue">CN202410412376.7</span>).
