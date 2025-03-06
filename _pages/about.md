@@ -96,6 +96,7 @@ Medical Image Analysis, 91, 103032, 2024 (<span style="color:blue">SCI Q1 Top</s
 - Holding three <span style="color:blue">patents</span> (<span style="color:blue">CN202210748948.X</span>, <span style="color:blue">CN202310278934.0</span>, <span style="color:blue">CN202410412376.7</span>).
 - Achieving the <span style="color:blue">National First Prize</span> in the [*Chinese Collegiate Computing Competition*](https://jsjds.blcu.edu.cn/) of 2020, and secured the  <span style="color:blue">International Second Prize</span> in the [*ASC20-21 Asian Student Supercomputer Challenge*](http://www.asc-events.org/StudentChallenge/index.html).
 - Volunteering as a Teaching Support Instructor in rural Dangyang City, Hubei Province, China, in 2018.
+- Hobbies: Reading, Thinking, and Hiking.
 
 
 
