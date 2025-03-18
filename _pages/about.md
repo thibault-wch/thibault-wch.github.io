@@ -92,7 +92,7 @@ Medical Image Analysis, 91, 103032, 2024 (<span style="color:blue">SCI Q1 Top</s
 
 
 # 💪 Social Activities
-- Hobbies: reading, thinking, and hiking.
+- Hobbies: Reading, Thinking, and Hiking.
 - Serving as the journal reviewer for  [*MedIA*](https://www.sciencedirect.com/journal/medical-image-analysis), [*PR*](https://www.sciencedirect.com/journal/pattern-recognition), [*IEEE TCSVT*](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=76), [*AIIM*](https://www.sciencedirect.com/journal/artificial-intelligence-in-medicine), [*CAAI TIT*](https://ietresearch.onlinelibrary.wiley.com/journal/24682322), [*PRLETTERS*](https://www.sciencedirect.com/journal/pattern-recognition-letters),[*BMC MI*](https://bmcmedimaging.biomedcentral.com/), [*IEEE ACCESS*](https://ieeeaccess.ieee.org/) and [*CCPE*](https://onlinelibrary.wiley.com/journal/15320634).
 - Serving as the conference reviewer for [*IJCAI*](https://2025.ijcai.org/), [*MICCAI*](https://conferences.miccai.org/2024/en),  [*BIBM*](https://ieeebibm.org/BIBM2024/), [*MIDL*](https://www.midl.io/), and [*IJCNN*](https://2025.ijcnn.org/).
 - Holding three <span style="color:blue">patents</span> (<span style="color:blue">CN202210748948.X</span>, <span style="color:blue">CN202310278934.0</span>, <span style="color:blue">CN202410412376.7</span>).
