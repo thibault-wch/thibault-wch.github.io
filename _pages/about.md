@@ -25,7 +25,7 @@ My research interest includes AI for neuroscience and AIGC. Here is my <a href="
 
 # 🔥 News
 - *2025.05*: &nbsp;🍾🍾 Congrats to Tao. <em>ARSeg for medical image segmentation</em> is early accepted by **MICCAI**. [[link]](https://arxiv.org/abs/2502.20784).
-- *2024.11*: &nbsp;🥳🥳 Delighted to have received the <span style="color:blue">**Doctoral National Scholarship**</span>!
+- *2024.11*: &nbsp;🥳🥳 Delighted to have received the <em>Chinese National Scholarship (PhD)</em> !
 - *2024.08*: &nbsp;🍾🍾 Congrats to Zhihao. <em>LEDA for Low-dose CT Denoising</em> is accepted by **BIBM**. [[link]](https://arxiv.org/pdf/2403.06128)
 - *2024.07*: &nbsp;🍾🍾 Congrats to Tao. <em>HiDiff for medical image segmentation</em> is accepted by **IEEE TMI** (<span style="color:blue">SCI Q1 Top, IF=8.9</span>). [[link]](https://ieeexplore.ieee.org/document/10587153/)
 - *2024.06*: &nbsp;🥳🥳 Profoundly thank the <em>IJCAI Committee</em> for providing the <span style="color:blue">**IJCAI 2024 Travel Grant**</span> in Jeju Island, South Korea.
@@ -80,12 +80,12 @@ Medical Image Analysis, 91, 103032, 2024 (<span style="color:blue">SCI Q1 Top</s
 - [**BIBM 2024**] Low-dose CT Denoising with Language-engaged Dual-space Alignment, Zhihao Chen, Tao Chen, **Chenhui Wang**, Chuang Niu, Ge Wang<sup>†</sup>, Hongming Shan<sup>†</sup>. (short paper) [[**doi**]](https://arxiv.org/pdf/2403.06128) [[**arxiv**]](https://arxiv.org/pdf/2403.06128) [[**code**]](https://github.com/hao1635/LEDA)
 
 # 🎖 Honors and Awards
-- *Nov. 2024* <span style="color:blue">Doctoral National Scholarship</span>.
+- *Nov. 2024* <span style="color:blue">Chinese National Scholarship (PhD)</span> at Fudan University.
+- *Sep. 2024* <span style="color:blue"> Outstanding Student</span> of Fudan University.
 - *June 2024*  <span style="color:blue">Travel Grant</span> from the *IJCAI committee* and <span style="color:blue">Overseas Participation Funding</span> from *Fudan University* to attend IJCAI 2024.
-- *2022-2024*  <span style="color:blue">Outstanding Member of the Communist Youth League</span>  at Fudan University. (<span style="color:#9C27B0">**two consecutive years**</span>)
 - *May 2021*  <span style="color:blue">Top Ten Outstanding Students</span>  at Wuhan University of Technology. (<span style="color:blue">0.01%</span>)
 - *Sep. 2020*  <span style="color:blue">Excellence Scholarship</span> at Wuhan University of Technology. (<span style="color:blue">0.1%</span>)
-- *2017-2019*  <span style="color:blue">National Scholarship</span>. (<span style="color:#9C27B0">**two consecutive years, 1%**</span>)
+- *2017-2019*  <span style="color:blue">China National Scholarship (Undergraduate)</span>. (<span style="color:#9C27B0">**two consecutive years, 1%**</span>)
 
 
 # 💪 Social Activities
