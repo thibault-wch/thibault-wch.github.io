@@ -24,14 +24,11 @@ I am in the fourth year of my **direct Ph.D. program** in Biomedical Engineering
 My research interest includes AI for neuroscience and AIGC. Here is my <a href="images/ChenhuiWang_CV.pdf">CV<a>.
 
 # 🔥 News
-- *2024.08*: &nbsp;🍾🍾 Congrats to Tao. <em>ARSeg for medical image segmentation</em> is early accepted by **MICCAI**. [[link]](https://arxiv.org/abs/2502.20784).
+- *2025.05*: &nbsp;🍾🍾 Congrats to Tao. <em>ARSeg for medical image segmentation</em> is early accepted by **MICCAI**. [[link]](https://arxiv.org/abs/2502.20784).
 - *2024.11*: &nbsp;🥳🥳 Delighted to have received the <span style="color:blue">**Doctoral National Scholarship**</span>!
 - *2024.08*: &nbsp;🍾🍾 Congrats to Zhihao. <em>LEDA for Low-dose CT Denoising</em> is accepted by **BIBM**. [[link]](https://arxiv.org/pdf/2403.06128)
 - *2024.07*: &nbsp;🍾🍾 Congrats to Tao. <em>HiDiff for medical image segmentation</em> is accepted by **IEEE TMI** (<span style="color:blue">SCI Q1 Top, IF=8.9</span>). [[link]](https://ieeexplore.ieee.org/document/10587153/)
 - *2024.06*: &nbsp;🥳🥳 Profoundly thank the <em>IJCAI Committee</em> for providing the <span style="color:blue">**IJCAI 2024 Travel Grant**</span> in Jeju Island, South Korea.
-- *2024.04*: &nbsp;🎉🎉 <em>FLDM-VTON for image-based virtual try-on</em> is accepted by **IJCAI** (<span style="color:blue">CCF A</span>). [[link]](https://arxiv.org/abs/2404.14162)
-- *2024.01*: &nbsp;🎉🎉 <em>HOPE for progression prediction of MCI</em> is accepted by **IEEE JBHI** (<span style="color:blue">SCI Q1,IF=7.7</span>). [[link]](https://ieeexplore.ieee.org/document/10412338)
-- *2023.11*: &nbsp;🎉🎉 <em>Joint learning framework for Alzheimer's disease</em> is accepted by **MedIA** (<span style="color:blue">SCI Q1 Top,IF=10.9</span>). [[link]](https://www.sciencedirect.com/science/article/pii/S136184152300292X?via%3Dihub)
 
 # 📝 Publications 
 
