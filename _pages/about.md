@@ -81,7 +81,7 @@ Medical Image Analysis, 91, 103032, 2024 (<span style="color:blue">SCI Q1 Top</s
 
 # 🎖 Honors and Awards
 - *Nov. 2024* <span style="color:blue">Chinese National Scholarship (PhD)</span> at Fudan University.
-- *Sep. 2024* <span style="color:blue"> Outstanding Student</span> of Fudan University.
+- *Sept. 2024* <span style="color:blue"> Outstanding Student</span> of Fudan University.
 - *June 2024*  <span style="color:blue">Travel Grant</span> from the *IJCAI committee* and <span style="color:blue">Overseas Participation Funding</span> from *Fudan University* to attend IJCAI 2024.
 - *May 2021*  <span style="color:blue">Top Ten Outstanding Students</span>  at Wuhan University of Technology. (<span style="color:blue">0.01%</span>)
 - *Sep. 2020*  <span style="color:blue">Excellence Scholarship</span> at Wuhan University of Technology. (<span style="color:blue">0.1%</span>)
