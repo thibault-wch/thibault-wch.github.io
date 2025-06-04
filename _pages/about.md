@@ -34,7 +34,7 @@ My research interest includes AI for neuroscience and AIGC. Here is my <a href="
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">IJCAI 2024</div><img src='images/FLDM-VTON.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
-
+ 
 [FLDM-VTON:Faithful Latent Diffusion Model for Virtual Try-on](https://arxiv.org/abs/2404.14162)
 
 **Chenhui Wang**, Tao Chen, Zhihao Chen, Zhizhong Huang, Taoran Jiang, Qi Wang, Hongming Shan<sup>†</sup>
