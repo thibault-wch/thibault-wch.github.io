@@ -21,9 +21,10 @@ redirect_from:
 I am in the fourth year of my **direct Ph.D. program** in Biomedical Engineering (BME) at the [Institute of Science and Technology for Brain-inspired Intelligence](https://istbi.fudan.edu.cn/), Fudan University, under the supervision of [Hongming Shan](http://hmshan.io/). I received my Bachelor's degree in Software Engineering (SE) from the [School of Computer Science and Artificial Intelligence](http://cst.whut.edu.cn/) at Wuhan University of Technology in 2021, with a GPA of 4.4 out of 5.0 (<span style="color:blue">Top 0.6%</span>).
 
 
-My research interest includes AI for medical image reconstruction and multi-modal analysis. Here is my <a href="images/ChenhuiWang_CV.pdf">CV<a>.
+My research interest includes AI for neuroscience and AIGC. Here is my <a href="images/ChenhuiWang_CV.pdf">CV<a>.
 
 # 🔥 News
+- *2024.08*: &nbsp;🍾🍾 Congrats to Tao. <em>ARSeg for medical image segmentation</em> is early accepted by **MICCAI**. [[link]](https://arxiv.org/abs/2502.20784).
 - *2024.11*: &nbsp;🥳🥳 Delighted to have received the <span style="color:blue">**Doctoral National Scholarship**</span>!
 - *2024.08*: &nbsp;🍾🍾 Congrats to Zhihao. <em>LEDA for Low-dose CT Denoising</em> is accepted by **BIBM**. [[link]](https://arxiv.org/pdf/2403.06128)
 - *2024.07*: &nbsp;🍾🍾 Congrats to Tao. <em>HiDiff for medical image segmentation</em> is accepted by **IEEE TMI** (<span style="color:blue">SCI Q1 Top, IF=8.9</span>). [[link]](https://ieeexplore.ieee.org/document/10587153/)
@@ -76,9 +77,8 @@ Medical Image Analysis, 91, 103032, 2024 (<span style="color:blue">SCI Q1 Top</s
 </div>
 </div>
 
-
-- [**IEEE TMI 2024**] HiDiff: Hybrid Diffusion Framework for Medical Image Segmentation, Tao Chen, **Chenhui Wang**, Zhihao Chen, Yiming Lei<sup>†</sup>, Hongming Shan<sup>†</sup>. [[**doi**]](https://ieeexplore.ieee.org/document/10587153/) [[**arxiv**]](https://arxiv.org/pdf/2407.03548) [[**code**]](https://github.com/takimailto/HiDiff) 
-
+- [**MICCAI 2025**] Autoregressive Medical Image Segmentation via Next-Scale Mask Prediction, Tao Chen, **Chenhui Wang**, Zhihao Chen, Hongming Shan<sup>†</sup>. (<span style="color:blue">CCF B</span>) [[**arxiv**]](https://arxiv.org/abs/2502.20784)
+- [**IEEE TMI 2024**] HiDiff: Hybrid Diffusion Framework for Medical Image Segmentation, Tao Chen, **Chenhui Wang**, Zhihao Chen, Yiming Lei<sup>†</sup>, Hongming Shan<sup>†</sup>. [[**doi**]](https://ieeexplore.ieee.org/document/10587153/) [[**arxiv**]](https://arxiv.org/pdf/2407.03548) [[**code**]](https://github.com/takimailto/HiDiff)
 - [**MICCAI 2023**] BerDiff: Conditional Bernoulli Diffusion Model for Medical Image Segmentation, Tao Chen, **Chenhui Wang**, Hongming Shan<sup>†</sup>. (<span style="color:blue">CCF B</span>) [[**doi**]](https://doi.org/10.1007/978-3-031-43901-8_47) [[**arxiv**]](https://arxiv.org/pdf/2304.04429.pdf) [[**code**]](https://github.com/takimailto/BerDiff) 
 - [**BIBM 2024**] Low-dose CT Denoising with Language-engaged Dual-space Alignment, Zhihao Chen, Tao Chen, **Chenhui Wang**, Chuang Niu, Ge Wang<sup>†</sup>, Hongming Shan<sup>†</sup>. (short paper) [[**doi**]](https://arxiv.org/pdf/2403.06128) [[**arxiv**]](https://arxiv.org/pdf/2403.06128) [[**code**]](https://github.com/hao1635/LEDA)
 
@@ -93,9 +93,9 @@ Medical Image Analysis, 91, 103032, 2024 (<span style="color:blue">SCI Q1 Top</s
 
 # 💪 Social Activities
 - Hobbies: Reading, Thinking, and Hiking.
-- Serving as the journal reviewer for  [*MedIA*](https://www.sciencedirect.com/journal/medical-image-analysis), [*PR*](https://www.sciencedirect.com/journal/pattern-recognition), [*IEEE TCSVT*](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=76), [*AI in Medicine*](https://www.sciencedirect.com/journal/artificial-intelligence-in-medicine), [*CAAI TIT*](https://ietresearch.onlinelibrary.wiley.com/journal/24682322), [*PRLETTERS*](https://www.sciencedirect.com/journal/pattern-recognition-letters), [*BMC Medical Imaging*](https://bmcmedimaging.biomedcentral.com/), [*Scientific Reports*](https://www.nature.com/srep/), [*IEEE ACCESS*](https://ieeeaccess.ieee.org/), and [*CCPE*](https://onlinelibrary.wiley.com/journal/15320634).
-- Serving as the conference reviewer for [*IJCAI*](https://2025.ijcai.org/), [*MICCAI (2024 & 2025)*](https://conferences.miccai.org/2024/en),  [*BIBM (2024 & 2025)*](https://ieeebibm.org/BIBM2024/), [*MIDL*](https://www.midl.io/), and [*IJCNN*](https://2025.ijcnn.org/).
-- Holding three <span style="color:blue">patents</span> (<span style="color:blue">CN202210748948.X</span>, <span style="color:blue">CN202310278934.0</span>, <span style="color:blue">CN202410412376.7</span>).
+- Serving as the journal reviewer for  [*MedIA*](https://www.sciencedirect.com/journal/medical-image-analysis), [*PR*](https://www.sciencedirect.com/journal/pattern-recognition), [*IEEE TCSVT*](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=76), [*AI in Medicine*](https://www.sciencedirect.com/journal/artificial-intelligence-in-medicine), [*CAAI TIT*](https://ietresearch.onlinelibrary.wiley.com/journal/24682322), [*PRLETTERS*](https://www.sciencedirect.com/journal/pattern-recognition-letters), [*BMC Medical Imaging*](https://bmcmedimaging.biomedcentral.com/), [*Scientific Reports*](https://www.nature.com/srep/), [*IEEE ACCESS*](https://ieeeaccess.ieee.org/), [*SIGNAL PROCESS-IMAGE*](https://www.sciencedirect.com/journal/signal-processing-image-communication), and [*CCPE*](https://onlinelibrary.wiley.com/journal/15320634).
+- Serving as the conference reviewer for [*IJCAI*](https://2025.ijcai.org/), [*SIGGRAPH Asia*](https://asia.siggraph.org/2025/), [*MICCAI (2024 & 2025)*](https://conferences.miccai.org/2024/en),  [*BIBM (2024 & 2025)*](https://ieeebibm.org/BIBM2024/), [*MIDL*](https://www.midl.io/), and [*IJCNN*](https://2025.ijcnn.org/).
+- Holding five <span style="color:blue">patents</span> (<span style="color:blue">CN202210748948.X</span>, <span style="color:blue">CN202310278934.0</span>, <span style="color:blue">CN202410412376.7</span>, <span style="color:blue">CN117372796A</span>, <span style="color:blue">CN119991959A</span>).
 - Achieving the <span style="color:blue">National First Prize</span> in the [*Chinese Collegiate Computing Competition*](https://jsjds.blcu.edu.cn/) of 2020, and secured the  <span style="color:blue">International Second Prize</span> in the [*ASC20-21 Asian Student Supercomputer Challenge*](http://www.asc-events.org/StudentChallenge/index.html).
 - Volunteering as a Teaching Support Instructor in rural Dangyang City, Hubei Province, China, in 2018.
 
