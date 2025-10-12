@@ -20,7 +20,7 @@ redirect_from:
 
 I am a last-year **direct Ph.D. candidate** in Biomedical Engineering (BME) at the [Institute of Science and Technology for Brain-inspired Intelligence](https://istbi.fudan.edu.cn/), Fudan University (FDU), under the supervision of Professor [Hongming Shan](http://hmshan.io/); I am currently grateful to be a visiting student in Professor [Yixuan Yuan](https://www.ee.cuhk.edu.hk/~yxyuan/)’s group at the Chinese University of Hong Kong (CUHK). I received my Bachelor’s degree in Software Engineering (SE) from the [School of Computer Science and Artificial Intelligence](http://cst.whut.edu.cn/), Wuhan University of Technology (WHUT).  
 
-My research interest includes **AI for neuroscience** and **AIGC**. 
+My research interest includes **AI for neuroscience** and **Human-centered AIGC**. 
 
 I anticipate graduating in **June 2026**. Here is my <a href="images/ChenhuiWang_CV.pdf">CV<a>.
 
